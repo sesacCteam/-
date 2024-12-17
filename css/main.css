@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "NanumSquare", sans-serif;
+}
+
+:root {
+  --main-color: #7cd984;
+  --point-color: #bde27a;
+  --sub-color: 82BF7C;
+  --background-color: #ecf6ee;
+  --title-font-color: #333333;
+  --content-font-color: #555555;
+  --disabled-color: #929292;
+}
