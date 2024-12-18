@@ -1,0 +1,180 @@
+header {
+  height: 130px;
+  background-color: var(--main-color);
+  margin-bottom: 100px;
+}
+
+footer {
+  height: 130px;
+  background-color: var(--main-color);
+  margin-top: 100px;
+}
+
+.line {
+  width: 900px;
+  margin: 50px;
+  border: 1px solid var(--point-color);
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.InfoWrapper {
+  width: 900px;
+  display: flex;
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  height: 400px;
+}
+
+.InfoImage {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+}
+
+.InfoContainer {
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.InfoDayPickContainer {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.InfoDayPick {
+  width: 30px;
+  height: 30px;
+  background-color: var(--disabled-color);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 20px;
+}
+
+.Label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.InfoDayPickContainer {
+  display: flex;
+}
+
+.JoinBtn {
+  width: 150px;
+  height: 40px;
+}
+
+.ContentWrapper {
+  width: 900px;
+  margin-top: 20px;
+}
+
+.ContentTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.ContentText {
+  font-size: 1rem;
+  line-height: 300%;
+}
+
+.LeaderWrapper {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.LeaderInpoContainer {
+  display: flex;
+  margin-top: 30px;
+}
+
+.LeaderInfo {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.LeaderName {
+  font-size: 18px;
+}
+
+.LeaderContent {
+  width: 750px;
+  height: 64px;
+  background-color: var(--point-color);
+  padding: 20px;
+  margin: 10px 0px 0px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.LeaderImage {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.LeaderContainer {
+  margin-left: 20px;
+  padding: 20px 0px;
+}
+
+.CommentWrapper {
+  margin-top: 50px;
+  width: 900px;
+}
+
+.CommentContainer {
+  width: 900px;
+  display: flex;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.CommentInput {
+  width: 750px;
+  border: 1px solid rgb(217, 219, 224);
+  padding: 2.7rem 2rem 2.4rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  resize: none;
+  font-size: 16px;
+}
+
+.CommentSecret {
+  color: rgb(217, 219, 224);
+}
+
+.CommentOption {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(217, 219, 224);
+  justify-content: space-evenly;
+  border-left: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.CommentButton {
+  padding: 5px 0px;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgb(217, 219, 224);
+  text-align: center;
+  line-height: 50px;
+  color: rgb(217, 219, 224);
+}
