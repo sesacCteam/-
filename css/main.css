@@ -9,11 +9,12 @@ body {
 }
 
 :root {
-  --main-color: #7cd984;
-  --point-color: #bde27a;
-  --sub-color: 82BF7C;
-  --background-color: #ecf6ee;
+  --main-color: #0078d7;
+  --point-color: #f27935;
+  --sub-color: #5eb3ff;
+  --background-color: #f4f8fc;
+  --component-color: #cee5fd;
   --title-font-color: #333333;
   --content-font-color: #555555;
-  --disabled-color: #929292;
+  --disabled-color: #b3c1d1;
 }
