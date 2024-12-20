@@ -1,0 +1,116 @@
+.wrapper {
+  margin: 100px 0px;
+  display: flex;
+  gap: 40px;
+  padding: 0px 200px;
+  height: 100vh;
+}
+
+.sub-wrapper {
+  background-color: rgb(94, 179, 225, 0.3);
+  padding: 40px;
+}
+
+.label {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.left-wrapper {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-top-wrapper {
+  background-color: var(--sub-color);
+  background-color: rgb(94, 179, 225, 0.3);
+  /* flex-grow: 0.1; */
+  height: 300px;
+  border-radius: 1rem;
+  padding: 40px;
+}
+
+.temp {
+  text-align: center;
+  font-size: 40px;
+}
+
+.current-icon {
+  width: 60%;
+}
+
+.weather {
+  font-size: 20px;
+  /* background-color: aqua; */
+}
+
+.today {
+  font-size: 20px;
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  padding: 20px 0px;
+}
+
+.temp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* background-color: blue; */
+  height: 120px;
+}
+
+.left-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1.5;
+  border-radius: 1rem;
+  padding: 40px;
+}
+
+.forecast-list {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: green; */
+}
+
+.forecast-left {
+  display: flex;
+}
+
+.right-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-top-wrapper {
+  flex-grow: 1;
+  border-radius: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.right-top-container {
+  background-color: pink;
+  width: 15%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.right-middle-wrapper {
+  flex-grow: 3;
+  border-radius: 1rem;
+}
+
+.right-bottom-wrapper {
+  flex-grow: 2;
+  border-radius: 1rem;
+}
