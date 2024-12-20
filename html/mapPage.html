@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeoulSeoul</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mapPage.css">
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
+      rel="stylesheet"
+    />
+    <script src="../js/mapPage.js" defer></script>
+
+    
+    <script type="text/javascript"
+    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=fcd58ac4d50b44f0bc9994cdf186e066&libraries=services"></script>
+
+
+</head>
+<body style="background-color: var(--background-color);">
+    <h1 class="bannerText">교통</h1>
+    <img class="bannerImg" src="../src/image/mapPageMainImg.png" alt="교통이미지">
+
+    <h2 class="title" style="color: var(--title-font-color);">서울 교통 정보</h3> 
+    <h3 class="subText" style="color: var(--content-font-color);">관광에 필요한 교통정보를 확인해 보세요!</h2>
+      <div class="container">
+        <div class="mainBox box1">공항에서 서울가는법</div>
+        <div class="mainBox box2">서울 지하철 이용방법</div>
+        <div class="mainBox box3">서울 시티투어 버스</div>
+      </div>
+    <h2 class="title">서울에서 길찾기</h2>
+    <!-- 위치 정보 영역 -->
+    <div class="mapContainer">
+      <!-- 검색어 입력 영역 -->
+      <div class="textinput">
+        <button class="destbutton" onclick="clickEvent()"></button>
+    <input type="text" placeholder="어디로 가고싶으신가요?" id="dest">
+      </div>
+      <!-- 실제 지도 표시 영역 -->
+      <div id="map">
+    </div>
+    </div>
+    
+</body>
+</html>
