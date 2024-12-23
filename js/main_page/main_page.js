@@ -159,7 +159,7 @@ const containers = document.querySelectorAll(".image-container");
 containers[0].classList.add("active");
 
 containers.forEach((container) => {
-  container.addEventListener("click", () => {
+  container.addEventListener("mouseover", () => {
     // 모든 컨테이너에서 active 제거
     containers.forEach((c) => c.classList.remove("active"));
 

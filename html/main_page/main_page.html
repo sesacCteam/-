@@ -21,37 +21,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="/css/main_page/main_page.css" />
-
-    <style>
-      header {
-        width: 100%;
-        top: 0;
-        z-index: 999;
-        background-color: white;
-      }
-      #logo {
-        width: 100%;
-      }
-      .navbar-brand {
-        width: 60px;
-      }
-      .nav-link:hover {
-        color: var(--main-color);
-      }
-      .nav-link {
-        font-size: 18px;
-      }
-      .footer {
-        display: flex;
-        font-size: 16px;
-        justify-content: space-around;
-      }
-      .footer > div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -60,9 +29,9 @@
           <a class="navbar-brand" href="#"
             ><img id="logo" src="/src/image/main_page/logo.png" alt="새싹로고"
           /></a>
-          <a class="nav-link" href="#">여행지</a>
-          <a class="nav-link" href="#">날씨</a>
-          <a class="nav-link" href="#">교통</a>
+          <a class="nav-link" href="../detail_page/detail_page.html">여행지</a>
+          <a class="nav-link" href="../weather_page/weather_page.html">날씨</a>
+          <a class="nav-link" href="../map_page/map_page.html">교통</a>
           <div class="dropdown">
             <a
               class="btn btn-white dropdown-toggle"
@@ -193,35 +162,76 @@
           >
             <div>Information</div>
             <div>
-              <a class="weather" href="#"><p>날씨</p></a>
-              <a class="trans" href="#"><p>교통</p></a>
+              <a class="weather" href="../weather_page/weather_page.html"
+                ><p>날씨</p></a
+              >
+              <a class="trans" href="../map_page/map_page.html"><p>교통</p></a>
             </div>
             <div>
-              <a href="">
-                <div class="place" href="#"><p>여행지</p></div>
+              <a href="../detail_page/detail_page.html">
+                <div class="place">
+                  <p>여행지</p>
+                </div>
               </a>
             </div>
           </div>
         </article>
         <article class="content-3">
-          <div>
-            <div class="pic_title">추천</div>
-            <div class="gallery">
-              <div class="image-container active">
-                <img src="/src/image/detail_page/사진1.png" alt="img1" />
-                <div class="text">용산구</div>
-              </div>
-              <div class="image-container">
-                <img src="/src/image/detail_page/사진2.jpg" alt="img2" />
-                <div class="text">중구</div>
-              </div>
-              <div class="image-container">
-                <img src="/src/image/detail_page/사진3.jpeg" alt="img3" />
-                <div class="text">서초구</div>
-              </div>
-              <div class="image-container">
-                <img src="/src/image/detail_page/사진4.png" alt="img4" />
-                <div class="text">광화문</div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div>
+              <div class="pic_title">Related Sites</div>
+              <div class="gallery">
+                <div class="image-container active">
+                  <a
+                    href="https://www.tripadvisor.co.kr/Attractions-g294197-Activities-Seoul.html"
+                  >
+                    <img
+                      src="/src/image/main_page/tripadvisor.png"
+                      alt="img1"
+                    />
+                    <div class="text">Tripadvisor</div>
+                    <div class="text2">
+                      Tripadvisor와 함께<br />여행을 계획하세요
+                    </div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a href="https://www.museum.go.kr/site/main/home">
+                    <img src="/src/image/main_page/museum.png" alt="img2" />
+                    <div class="text">국립중앙박물관</div>
+                    <div class="text2">National Museum of Korea</div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a
+                    href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+                  >
+                    <img
+                      src="/src/image/main_page/GyeongbokgungPalace.png"
+                      alt="img3"
+                    />
+                    <div class="text">경복궁</div>
+                    <div class="text2">조선왕조 제일의 법궁(法宮)</div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a href="https://www.seoulcitybus.com/">
+                    <img
+                      src="/src/image/main_page/citytourbus.png"
+                      alt="img4"
+                    />
+                    <div class="text">서울시티투어</div>
+                    <div class="text2">
+                      서울시티투어버스와 함께<br />새로운 매력의 서울을
+                      만나보세요
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -242,6 +252,7 @@
               ></iframe>
             </div>
           </div>
+          <div>contents</div>
         </article>
         <!-- 페이드효과 aos 라이브러리 예시 사용 -->
         <!-- <div
@@ -250,7 +261,7 @@
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           >
-            <div><img src="../src/image/thumbnail3.webp" alt="" /></div>
+          [요소 공간]
           </div> -->
       </section>
     </main>

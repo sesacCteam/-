@@ -23,7 +23,35 @@ body {
   font-family: "NanumSquareNeo";
   background-color: var(--background-color);
 }
-
+header {
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+#logo {
+  width: 100%;
+}
+.navbar-brand {
+  width: 60px;
+}
+.nav-link:hover {
+  color: var(--main-color);
+}
+.nav-link {
+  font-size: 18px;
+}
+.footer {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-around;
+  background-color: var(--component-color);
+}
+.footer > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* Main area (section) */
 main {
   display: flex;
@@ -192,10 +220,12 @@ button:hover {
 }
 .purpose > div:nth-child(1) {
   font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .purpose > div:nth-child(3),
 div:nth-child(4) {
   font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .purpose-2 {
@@ -251,6 +281,7 @@ div:nth-child(4) {
   font-size: 3rem;
   color: var(--background-color);
   padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .purpose-2 a {
@@ -261,23 +292,28 @@ div:nth-child(4) {
   display: flex;
   justify-content: center;
   font-size: 4rem;
+  margin-top: 8rem;
 }
 .content-4 iframe {
   border-radius: 10px;
 }
 .content-4 > div:nth-child(1) {
-  flex-basis: 20%;
+  flex-basis: 30%;
 }
 .content-4 > div:nth-child(2) {
+  flex-basis: 30%;
   margin-left: 8rem;
 }
 
 /* -------------------------------------- */
 /* 아코디언 메뉴 */
+.content-3 {
+  display: flex;
+  justify-content: center;
+}
 .pic_title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 8rem;
+  font-size: 4rem;
+  padding-left: 5px;
 }
 .gallery {
   /* position: relative; */
@@ -288,12 +324,11 @@ div:nth-child(4) {
 /* /////////// */
 .image-container {
   position: relative;
-  width: 100px;
-  height: 300px;
-  transition: all 0.3 ease;
+  width: 15rem;
+  height: 40rem;
+  transition: 0.3s;
   overflow: hidden;
   cursor: pointer;
-  margin-top: 8rem;
 }
 .image-container img {
   width: 100%;
@@ -308,20 +343,17 @@ div:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.1);
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+  writing-mode: vertical-lr;
   padding: 5px;
   border-radius: 5px;
-  writing-mode: vertical-rl;
-  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .image-container.active {
-  width: 500px;
+  width: 70rem;
 }
 
 .image-container.active .text {
@@ -329,4 +361,23 @@ div:nth-child(4) {
   font-size: 18px;
   padding: 10px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.image-container .text2 {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  font-size: 3rem;
+}
+.image-container.active .text2 {
+  writing-mode: horizontal-tb;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.7s ease-in;
+  opacity: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
