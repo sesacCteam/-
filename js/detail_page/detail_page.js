@@ -2,6 +2,9 @@
 
 const paths = document.querySelectorAll("path.symbol");
 const infoBox = document.getElementById("infoBox");
+let guname = "";
+// let placelist = [];
+let koList = [];
 
 // 각 path에 이벤트 추가
 paths.forEach((path) => {
@@ -30,8 +33,11 @@ paths.forEach((path) => {
   path.addEventListener("click", (event) => {
     const regionName = document.querySelector("path.symbol");
     const dataValue = path.getAttribute("href");
+    guname = path.getAttribute("alt");
     infoBox.textContent = `${dataValue}의 정보를 여기에 표시`;
     infoBox.style.display = "block";
+    console.log(guname);
+    getLocalPlace();
   });
 });
 
@@ -69,5 +75,46 @@ containers.forEach((container) => {
 
 // document.querySelector(".image-container img").classList.add("active");
 
-const infoText = document.getElementsByName("#area1");
-infoText.textContent = districtInfo[initialDistrict];
+// const infoText = document.getElementsByName("#area1");
+// infoText.textContent = districtInfo[initialDistrict];
+
+//await 써야 데이터 받아옴
+//async 가 await 짝
+const getLocalPlace = async () => {
+  const place = await fetch(
+    "http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/400"
+  );
+
+  const placeData = await place.json();
+  console.log(place);
+  console.log(placeData);
+  console.log(placeData.TbVwAttractions.row[0].LANG_CODE_ID);
+
+  // console.log(test);
+
+  for (let i = 0; i < 400; i++) {
+    const lang = placeData.TbVwAttractions.row[i].LANG_CODE_ID;
+    let test = placeData.TbVwAttractions.row[i].NEW_ADDRESS;
+    const nametest = placeData.TbVwAttractions.row[i].POST_SJ;
+    // console.log(placeData.TbVwAttractions.row[i].LANG_CODE_ID);
+    if (lang === "ko") {
+      koList.push(test, nametest);
+      console.log(koList);
+
+      // let result = placeData.filter((placeData.TbVwAttractions.row[0].LANG_CODE_ID) => placeData.TbVwAttractions.row[0].LANG_CODE_ID ==='');
+    }
+  }
+  const placelist = koList.filter(function (koli) {
+    console.log(koli);
+    if (koli.includes(guname)) {
+      console.log("DLSEPRTMQJSGH", koli.includes(guname));
+    }
+
+    // koli.includes(guname);
+    // console.log(placelist);
+    // console.log("asdfasdfasdfsdfsafs", guname);
+  });
+
+  console.log("잘됨! ", placelist);
+  // 필터로 반복문을 만들어서 용산이라는 글자가 나올때까지 걸르는것
+};
