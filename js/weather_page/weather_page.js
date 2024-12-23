@@ -162,15 +162,7 @@ const getWeather = async () => {
     date_ValueFn = `${date_ValueFn[1]}월 ${date_ValueFn[2]}일`;
     date.innerText = date_ValueFn;
     forecast_left.append(date);
-
-    console.log(date_ValueFn);
-
-    console.log(forecastData.list[0].main.temp_max);
-
-    // right_top_container.append(div);
   }
-
-  console.log(forecastData.list);
 
   //////////////////////////////////////////////////////////////////////////////////////////
   const airPollution = await fetch(
@@ -194,6 +186,10 @@ const getWeather = async () => {
   const currentO3Section = document.querySelector(".o3");
   const currentO3 = airPollutionData.list[0].components.o3;
   currentO3Section.textContent = currentO3;
+
+  // const currentO3Section = document.querySelector(".o3");
+  // const currentO3 = airPollutionData.list[0].components.o3;
+  // currentO3Section.textContent = currentO3;
 };
 
 getWeather();
