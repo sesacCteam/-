@@ -42,26 +42,30 @@ body{
 
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 36px;
     width: calc(100vw - 16rem);
+    /* justify-content: space-between; */
+    /* display: flex; */
 }
 .mainBox{
     /* border: 1px solid black; */
-    /* width: 400px; */
+    width: 33%;
     /* height: 300px; */
     line-height: 300px;
     color: white;
     text-align: center;
     /* /* margin-right: 12px; */
+
     margin-top: 0px; 
     font-size: 2rem;
-    flex: 1 0 auto;
 }
 
 /* 메인박스 이미지 설정 */
 .box1{
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(../../src/image/map_page/airport.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 .box1:hover{
@@ -74,6 +78,8 @@ body{
 }
 .box2{
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(../../src/image/map_page/subway.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .box2:hover{
     background-image: url(../../src/image/map_page/subway.png);
@@ -85,6 +91,9 @@ body{
 }
 .box3{
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(../../src/image/map_page/seoulbus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }.box3:hover{
     background-image: url(../../src/image/map_page/seoulbus.png);
     transform: scale(1.05);
