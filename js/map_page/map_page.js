@@ -79,8 +79,8 @@ function displayMarker(place) {
         console.log(place.id)
         findLoadbtn.setAttribute('onclick',`location.href = '${place.place_url}'`)
         // 밑줄 생성
-        const hr = document.createElement('hr')
-        addressInfor.append(hr)
+        // const hr = document.createElement('hr')
+        // addressInfor.append(hr)
         // 생성된곳으로 스크롤
         var location = document.querySelector(".movekakaobtn").offsetTop // 좌표 구하기
         window.scrollTo({top:location,left:0,behavior:'smooth'});
