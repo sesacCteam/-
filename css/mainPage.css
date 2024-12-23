@@ -4,98 +4,335 @@
   padding: 0;
 }
 
-body {
-  font-family: "NanumSquare", sans-serif;
+html {
+  font-size: 62.5%;
 }
 
 :root {
-  --main-color: #7cd984;
-  --point-color: #bde27a;
-  --sub-color: #82bf7c;
-  --background-color: #ecf6ee;
+  --main-color: #0078d7;
+  --point-color: #f27935;
+  --sub-color: #5eb3ff;
+  --background-color: #f4f8fc;
+  --component-color: #cee5fd;
   --title-font-color: #333333;
   --content-font-color: #555555;
-  --disabled-color: #929292;
+  --disabled-color: #b3c1d1;
 }
 
-/* * {
-  border: 1px solid black;
-} */
+body {
+  font-family: "NanumSquare", sans-serif;
+  padding: 0 8rem 0 8rem;
+  background-color: var(--background-color);
+}
 
+/* Main area (section) */
 main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Text section */
+.text-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.text-1 > div:first-child {
+  font-size: 1.6rem;
+}
+
+.text-1 > div:nth-child(2) {
+  color: var(--main-color);
+  font-size: 4rem;
+}
+
+/* Card Slider */
+.content-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+/* Flip card styles */
+.flip {
+  position: relative;
+  perspective: 1100px;
+  width: 20rem; /* 이미지에 맞게 카드 크기 자동 설정 */
+  height: 25rem; /* 이미지에 맞게 카드 크기 자동 설정 */
+}
+
+.card {
+  width: 100%; /* 카드 크기가 이미지 크기에 맞게 설정 */
+  height: 100%; /* 카드 크기가 이미지 크기에 맞게 설정 */
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  border: none;
+  border-radius: 10px; /* 카드 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 카드 쉐도우 */
+}
+
+.front > img {
+  width: 100%; /* 이미지 크기에 맞게 자동 조정 */
+  height: 100%; /* 이미지 비율에 맞게 조정 */
+  border-radius: 10px; /* 이미지에도 모서리 둥글게 */
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* 카드 양면 모두 둥글게 */
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: var(--component-color); /* 배경색 설정 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 쉐도우 적용 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flip:hover .card {
+  transform: rotateY(180deg);
+  transition: ease-in-out 600ms;
+  background-color: var(--component-color);
+}
+
+/* Card slider container */
+.card-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60%; /* 슬라이드 영역 전체 width */
+  overflow: hidden;
+}
+
+/* Slider wrapper and buttons */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60%; /* 카드 슬라이더의 전체 너비 */
+  overflow: hidden;
+}
+
+.card-slider {
+  display: flex;
+  height: 30rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.flip {
+  flex: 0 0 auto; /* 카드 크기를 이미지 크기에 맞게 자동 설정 */
+  margin: 0 10px; /* 카드 간 간격 */
+}
+
+button {
+  width: 40px;
+  position: absolute;
+  background-color: var(--background-color);
+  color: var(--sub-color);
+  border: 2px solid var(--component-color);
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: var(--component-color);
+  transition: 1s;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼에 쉐도우 추가 */
+}
+
+/* --------------------------------------------- */
+
+.content-2 {
+  display: flex;
+  justify-content: center;
+  padding: 8rem;
+}
+.purpose {
+  flex-basis: 30%;
+  padding: 3rem;
+  height: 55rem;
+  background: url(../src/image/content1bgimg.png) no-repeat bottom #203b7e;
+  color: var(--background-color);
+  border-radius: 8px;
+  background-size: 100%;
+  margin: 1.5rem;
+}
+.purpose > div:nth-child(1) {
+  font-size: 3rem;
+}
+.purpose > div:nth-child(3),
+div:nth-child(4) {
+  font-size: 2rem;
+}
+
+.purpose-2 {
+  flex-basis: 40%;
+  padding-left: 8rem;
+}
+.purpose-2 > div:nth-child(1) {
+  font-size: 4rem;
+}
+.purpose-2 > div:nth-child(2) {
   display: flex;
 }
 
-.slider{
-    height: 450px;
-    margin: auto;
-    position:relative;
-    width: 120%;
-    display:grid;
-    place-items:center;
-    overflow:hidden;
-    left:-10%;
-  }
-  
-  .slide-track{
-    display:flex;
-    width: calc(300px * 12);
-    animation: scroll 40s linear infinite;
-  }
-  
-  .slide-track:hover{
-    animation-play-state:paused;
-  }
-  
-  @keyframes scroll{
-    0% {
-      transform: translateX(0);
-    }
-    100%{
-      transform: translateX(calc(-300px * 6));
-    }
-  }
-  
-  .slide{
-    height: 250px;
-    width: 300px;
-    display: flex;
-    align-items:center;
-    padding: 15px;
-    perspective:100px;
-  }
-  
-  .train-card{
-    width:100%;
-    transition:transform 1s;
-    border-radius:10px;
-    overflow:hidden;
-  }
-  
-  .train-card:hover{
-    transform:translateZ(18px);
-  }
-  
-  /* 슬라이더 그라데이션 그림자 */
-  
-  .slider::before,
-  .slider::after {
-    background:linear-gradient(to right, #f6f4f2 0%,
-    rgba(255,255,255,0) 100%);
-    content:'';
-    height:100%;
-    position:absolute;
-    width:15%;
-    z-index:2;
-  }
-  
-  .slider::before{
-    left:0;
-    top:0;
-  }
-  
-  .slider::after{
-    right:0;
-    top:0;
-    transform: rotateZ(180deg);
-  }
+.weather {
+  background: url(../src/image/weather.png);
+  flex-basis: 50%;
+  height: 25rem;
+  background-position: center;
+  background-size: 100%;
+  margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.trans {
+  background: url(../src/image/transportation.png);
+  flex-basis: 50%;
+  height: 25rem;
+  background-position: center;
+  background-size: 100%;
+  margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.place {
+  background: url(../src/image/seoul.png);
+  height: 24rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  background-position: center;
+  background-size: 100%;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.weather:hover,
+.trans:hover,
+.place:hover {
+  transform: translateY(-15px);
+  transition: 0.5s;
+}
+.weather > p,
+.trans > p,
+.place > p {
+  font-size: 4rem;
+  color: var(--background-color);
+  padding: 10px;
+}
+
+.purpose-2 a {
+  text-decoration: none;
+}
+
+.content-3 {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+}
+.content-3 iframe {
+  border-radius: 10px;
+}
+.content-3 > div:nth-child(1) {
+  flex-basis: 20%;
+}
+.content-3 > div:nth-child(2) {
+  flex-basis: 40%;
+  margin-left: 8rem;
+}
+
+/* -------------------------------------- */
+/* 아코디언 메뉴 */
+.accordion {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--component-color);
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.accordion section {
+  position: relative;
+  display: block;
+  float: left;
+  width: 9rem;
+  height: 100%;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  color: #333;
+  /* background-color: var(--sub-color); */
+  background: url(../src/image/thumbnail1.webp);
+  overflow: hidden;
+  border-radius: 3px;
+}
+.accordion section h2 {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  top: 12rem;
+  left: 0;
+  text-indent: 1rem;
+  padding: 0;
+  margin: 0;
+  color: #ddd;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.accordion section h2 a {
+  display: block;
+  width: 100%;
+  line-height: 2rem;
+  text-decoration: none;
+  outline: 0 none;
+}
+.accordion section:target {
+  width: 50%;
+  padding: 0 1rem;
+  background: url(../src/image/thumbnail1.webp) no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.accordion section:target h2 {
+  position: static;
+  font-size: 2rem;
+  -webkit-transform: rotate(0deg);
+}
+.accordion section,
+.accordion section h2 {
+  -webkit-transition: all 1s ease;
+}
