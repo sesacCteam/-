@@ -151,3 +151,19 @@ document.querySelector(".prev-btn").addEventListener("click", () => {
   // 오른쪽 버튼 활성화
   document.querySelector(".next-btn").disabled = false;
 });
+
+/* -------------------------------------- */
+// 추천 이미지 상시로 하나 열려있는 코드
+const containers = document.querySelectorAll(".image-container");
+
+containers[0].classList.add("active");
+
+containers.forEach((container) => {
+  container.addEventListener("click", () => {
+    // 모든 컨테이너에서 active 제거
+    containers.forEach((c) => c.classList.remove("active"));
+
+    // 클릭한 컨테이너에 active 추가
+    container.classList.add("active");
+  });
+});

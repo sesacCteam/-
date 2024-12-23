@@ -274,3 +274,59 @@ div:nth-child(4) {
 
 /* -------------------------------------- */
 /* 아코디언 메뉴 */
+.pic_title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 8rem;
+}
+.gallery {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+}
+
+/* /////////// */
+.image-container {
+  position: relative;
+  width: 100px;
+  height: 300px;
+  transition: all 0.3 ease;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 8rem;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 20px;
+}
+.image-container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 5px;
+  border-radius: 5px;
+  writing-mode: vertical-rl;
+  transition: all 0.3s ease;
+}
+
+.image-container.active {
+  width: 500px;
+}
+
+.image-container.active .text {
+  writing-mode: horizontal-tb;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
