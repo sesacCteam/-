@@ -47,7 +47,7 @@ function displayMarker(place) {
     window.kakao.maps.event.addListener(marker, 'click', function() {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
         console.log(place)
-        console.log(place.place_name)
+        console.log(place.place_name);
         // console.log()
         var infowindow = new window.kakao.maps.InfoWindow({});
         infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
@@ -74,9 +74,16 @@ function displayMarker(place) {
         // 길찾기 버튼 출력
         const findLoadbtn = document.createElement('button');
         findLoadbtn.innerHTML = '자세히 보기'
-        addressInfor.append(findLoadbtn)  
+        addressInfor.append(findLoadbtn)
+        findLoadbtn.classList.add('movekakaobtn')
         console.log(place.id)
         findLoadbtn.setAttribute('onclick',`location.href = '${place.place_url}'`)
+        // 밑줄 생성
+        const hr = document.createElement('hr')
+        addressInfor.append(hr)
+        // 생성된곳으로 스크롤
+        var location = document.querySelector(".movekakaobtn").offsetTop // 좌표 구하기
+        window.scrollTo({top:location,left:0,behavior:'smooth'});
 
         // function test(){
         //     location.href = `https://map.kakao.com/link/map/${place.id}`

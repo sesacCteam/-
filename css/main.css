@@ -70,6 +70,7 @@
 }
 body {
   font-family: "NanumSquareNeo";
+  /* padding: 0 8rem 0 8rem; */
 }
 
 :root {
@@ -81,4 +82,23 @@ body {
   --title-font-color: #333333;
   --content-font-color: #555555;
   --disabled-color: #b3c1d1;
+}
+
+html{
+  font-size: 62.5%;
+}
+h1{
+  font-size: 6rem;
+}
+h2{
+  font-size: 4rem;
+}
+h3{
+  font-size: 2rem;
+}
+h4{
+  font-size: 1.6rem;
+}
+h5{
+  font-size: 1.2rem;
 }
