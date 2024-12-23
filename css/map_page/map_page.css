@@ -48,6 +48,24 @@ body{
     /* justify-content: space-between; */
     /* display: flex; */
 }
+/* .subcontainer{
+    display: flex;
+    justify-content: center;
+
+} */
+.tripbox{
+    height: 40vh;
+    width: 33%;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+    /* display: flex; */
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: var(--component-color);
+    
+}
 .mainBox{
     /* border: 1px solid black; */
     width: 33%;
@@ -56,7 +74,6 @@ body{
     color: white;
     text-align: center;
     /* /* margin-right: 12px; */
-
     margin-top: 0px; 
     font-size: 2rem;
 }
@@ -169,4 +186,19 @@ body{
     display: flex;
     justify-content: center;
     /* font-size: 16px; */
+}
+.list1{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    line-height: 10rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.list1:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+
 }
