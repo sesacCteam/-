@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "NanumSquare", sans-serif;
+  font-family: "NanumSquareNeo";
   padding: 0 8rem 0 8rem;
   background-color: var(--background-color);
 }
