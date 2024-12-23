@@ -1,14 +1,15 @@
 .wrapper {
   margin: 100px 0px;
   display: flex;
-  gap: 40px;
-  padding: 0px 200px;
+  gap: 20px;
+  padding: 0px 50px;
   height: 100vh;
 }
 
 .sub-wrapper {
   background-color: rgb(94, 179, 225, 0.3);
   padding: 40px;
+  border-radius: 1rem;
 }
 
 .label {
@@ -17,7 +18,7 @@
 }
 
 .left-wrapper {
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -44,13 +45,16 @@
 .weather {
   font-size: 20px;
   /* background-color: aqua; */
+  padding: 10px 0px;
 }
 
 .today {
   font-size: 20px;
-  border-top: 1px solid gray;
-  margin-top: 20px;
-  padding: 20px 0px;
+  /* border-top: 1px solid gray; */
+  /* margin-top: 20px; */
+  /* padding: 20px 0px; */
+  height: 24px;
+  line-height: 28px;
 }
 
 .temp-wrapper {
@@ -74,15 +78,43 @@
 .forecast-list {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  /* background-color: blue; */
   /* background-color: green; */
+}
+
+.img {
+  width: 24px;
+  height: 24px;
+  /* background-color: pink; */
+}
+
+.today-wrapper {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  height: 24px;
+  gap: 10px;
+  border-top: 1px solid gray;
+  /* margin-top: 30px 0px; */
+  padding: 30px 0px;
+  /* justify-content: center; */
+  align-items: center;
+  align-content: center;
+}
+
+.forecast-list-container {
+  display: flex;
 }
 
 .forecast-left {
   display: flex;
+  /* background-color: orange; */
+  align-items: center;
 }
 
 .right-wrapper {
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -96,21 +128,81 @@
 }
 
 .right-top-container {
-  background-color: pink;
+  /* background-color: pink; */
   width: 15%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  gap: 0px;
 }
 
 .right-middle-wrapper {
-  flex-grow: 3;
+  flex-grow: 4;
   border-radius: 1rem;
 }
 
+.right-middle-bottom-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.right-middle-bottom-container {
+  background-color: orange;
+}
+
+.bottom-container {
+  display: flex;
+}
+
+.right-middle-top-wrapper {
+  display: flex;
+}
+
+.right-left-wrapper {
+  width: 50%;
+  /* background-color: pink; */
+}
+
+.right-left-bottom-wrapper {
+  display: flex;
+}
+
+.sun-wrapper {
+  display: flex;
+}
+
+.right-right-wrapper {
+  width: 50%;
+  /* background-color: blue; */
+}
+
+.airPollution-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .right-bottom-wrapper {
-  flex-grow: 2;
+  flex-grow: 0.2;
   border-radius: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+.wind-wrapper {
+  width: 50%;
+}
+
+.wind-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.wind-list {
+  display: flex;
+  height: 90px;
+  line-height: 90px;
+  font-size: 20px;
+  justify-content: space-between;
 }
