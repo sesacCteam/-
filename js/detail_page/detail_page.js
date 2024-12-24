@@ -3,9 +3,11 @@
 const paths = document.querySelectorAll("path.symbol");
 const infoBox = document.getElementById("infoBox");
 let guname = "";
+let placename = "";
 // let placelist = [];
-let koList = [];
-
+let koList = []; //구로 먼저 필터링하면 생기는 배열
+let placeinfor = []; // 이름들을 필터링하면 생기는 배열
+let finalarr = []; // 모든 배열들을 모아서 마지막에 객체 만드려고 선언
 // 각 path에 이벤트 추가
 paths.forEach((path) => {
   // 호버 시 관련 정보를 임시로 표시
@@ -31,6 +33,7 @@ paths.forEach((path) => {
 //지도에서 누른 구의 정보를 보여주는 것
 paths.forEach((path) => {
   path.addEventListener("click", (event) => {
+
     const regionName = document.querySelector("path.symbol");
     const dataValue = path.getAttribute("href");
     guname = path.getAttribute("alt");
@@ -81,14 +84,21 @@ containers.forEach((container) => {
 //await 써야 데이터 받아옴
 //async 가 await 짝
 const getLocalPlace = async () => {
+  // 클릭했을때 이미 데이터가 있다면 한번 초기화 하기
+  if(koList !== null || placeinfor !== null || finalarr !== null ){
+    koList = [];
+    placeinfor =[];
+    finalarr = [];
+
+  }
   const place = await fetch(
     "http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/400"
   );
 
   const placeData = await place.json();
-  console.log(place);
-  console.log(placeData);
-  console.log(placeData.TbVwAttractions.row[0].LANG_CODE_ID);
+  // console.log(place);
+  // console.log(placeData);
+  // console.log(placeData.TbVwAttractions.row[0].LANG_CODE_ID);
 
   // console.log(test);
 
@@ -97,24 +107,52 @@ const getLocalPlace = async () => {
     let test = placeData.TbVwAttractions.row[i].NEW_ADDRESS;
     const nametest = placeData.TbVwAttractions.row[i].POST_SJ;
     // console.log(placeData.TbVwAttractions.row[i].LANG_CODE_ID);
+
     if (lang === "ko") {
       koList.push(test, nametest);
-      console.log(koList);
+      // console.log(koList);
 
       // let result = placeData.filter((placeData.TbVwAttractions.row[0].LANG_CODE_ID) => placeData.TbVwAttractions.row[0].LANG_CODE_ID ==='');
     }
   }
-  const placelist = koList.filter(function (koli) {
-    console.log(koli);
+  // console.log( 'for 문 밖에 >>>>>>>>>>>>>>>>>>>>>>',koList);
+  
+  // 구 이름으로 필터 하기
+  const placelist = koList.filter(function (koli , i) {
+    // console.log('filter 함수 안에 >>>>>>>>>>',koli);
     if (koli.includes(guname)) {
-      console.log("DLSEPRTMQJSGH", koli.includes(guname));
-    }
 
-    // koli.includes(guname);
-    // console.log(placelist);
-    // console.log("asdfasdfasdfsdfsafs", guname);
+      console.log("includes 안에 >>>>>>>>>>>>>>", koli.includes(guname));
+        // placename.push(koList[i+1])
+        placename = koList[i+1],
+        placeinfor.push(placename)
+      
+      return koli
+    }
   });
 
-  console.log("잘됨! ", placelist);
+
+  // console.log('여기에 식당이름 나오면 좋겠다.',placename);
+
+  // console.log('식당 이름 >>>>>>>>>' , placeinfor)
+  // console.log('마지막 placelist',placelist)
+// 이름배열,주소배열을 하나의 객체로 만들기
+for(i=0;i<placeinfor.length;i++){
+   let objs = {
+    id : i,
+    name : placeinfor[i],
+    address : placelist[i]
+  }
+  finalarr.push(objs);
+}
+// 객체 완성된거 보는거
+console.log(finalarr);
+// 이름 불러오는법
+// console.log(finalarr[0].name);
+  
+
+
+
+  // console.log("잘됨! ", placelist);
   // 필터로 반복문을 만들어서 용산이라는 글자가 나올때까지 걸르는것
 };
