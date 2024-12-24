@@ -11,6 +11,7 @@
       href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../../css/detail_page/detail_page.css">
     <script src="../../js/map_page/map_page.js" defer></script>
 
     
@@ -41,9 +42,13 @@
     <input type="text" placeholder="어디로 가고싶으신가요?" id="dest">
       </div>
       <!-- 실제 지도 표시 영역 -->
-      <div id="map">
+      <div id="map"></div>
     </div>
-    </div>
+          <!-- 마커 클릭되면 여기에 카드들이 추가가 됨. -->
+    <section  id="cardList">
+
+    </section>
+
 
     <h2 class="title">교통 수단 별 선호 여행지</h3>
       <h3 class="subText" style="color: var(--content-font-color);">관광에 필요한 교통정보를 확인해 보세요!</h2>
