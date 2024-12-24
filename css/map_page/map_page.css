@@ -175,8 +175,22 @@ body{
 
 }
 
+.card-section{
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    /* gap: 20px; */
+    margin: 8rem auto;
 
-.placetitle{
+}
+.cardImg{
+    width: 280px;
+    height: 210px;
+    /* background-size: cover; */
+    /* overflow: hidden; */
+
+}
+/* .placetitle{
     margin-top: 36px;
     display: flex;
     justify-content: center;
@@ -185,8 +199,7 @@ body{
     margin-top: 36px;
     display: flex;
     justify-content: center;
-    /* font-size: 16px; */
-}
+} */
 .list1{
     width: 10rem;
     height: 10rem;
