@@ -48,6 +48,27 @@ const getWeather = async () => {
   const currentSunset = currentData.sys.sunset;
   currentSunsetSection.textContent = `PM${convertSuntime(currentSunset)}`;
 
+  console.log(currentData.main.humidity);
+  console.log(currentData.main.grnd_level);
+  console.log(currentData.visibility);
+  console.log(currentData.main.feels_like);
+
+  const currentHumiditySection = document.querySelector(".humidity");
+  const currentHumidity = currentData.main.humidity;
+  currentHumiditySection.textContent = `${currentHumidity}%`;
+
+  const currentGrndLevel2Section = document.querySelector(".grnd_level");
+  const currentGrndLevel2 = currentData.main.grnd_level;
+  currentGrndLevel2Section.textContent = `${currentGrndLevel2}hPa`;
+
+  const currentVisibilitySection = document.querySelector(".visibility");
+  const currentVisibility = currentData.visibility;
+  currentVisibilitySection.textContent = `${currentVisibility}m`;
+
+  const currentFeelsLikeSection = document.querySelector(".feels_like");
+  const currentFeelsLike = currentData.main.feels_like;
+  currentFeelsLikeSection.textContent = `${currentFeelsLike}°C`;
+
   function convertSuntime(timestamp) {
     // 밀리세컨즈로 변환하여 Date 객체 생성
     const date = new Date(timestamp * 1000);
