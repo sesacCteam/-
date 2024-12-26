@@ -4,7 +4,15 @@ let placeCard; // 카드 1장
 let placeImg; // 카드에서 위에꺼
 let placeText; // 카드에서 아래꺼
 let placeNames = [];
+let cardId;
 
+
+function enterEvent(e){
+// console.log(e)
+    if(e.keyCode == 13){
+        clickEvent();
+    }
+}
 function clickEvent (){
     let dest = document.querySelector('#dest').value
 
@@ -17,12 +25,13 @@ function clickEvent (){
             const removeSpan = document.querySelector('#cardList > span')
             // removeSpan.classList.remove('card')
             cardList.classList.remove('card-grid')
+            // 카드삭제
             removeSpan.remove()
+            // 이전 검색에 사용된 배열 초기화
+            placeNames = [];
 
         }
-        // console.log('section이 나와야함',parent)
-        // parent.removeChild(removeSpan);
-        console.log('카드 여러개 생김 여기서 이제 지워야해')
+
    
     }
 
@@ -66,16 +75,21 @@ function displayMarker(place) {
 
     // 마커에 클릭이벤트를 등록합니다
     window.kakao.maps.event.addListener(marker, 'click', function() {
+     //여기서부터 시작!   
         // console.log(marker)
         // console.log(map)
         // console.log(place)
         // 이미 한번 클릭해서 카드가 생셩되어있다면 아래 내용 실행
         if(placeNames.includes(place.place_name)){
+            // 선택된 카드 아이디로 다시 한번 초기화 해줘야함 안그러면 삭제된 id를 한번더 선택하게됨.
+            cardId = place.place_name.replace(/ /g,"")
+
             console.log('이미 한번 클릭한 식당입니다.')
-            // 이거 지금 됐다가 안됐다가 그럼 이거 공백이 아이디에 들어가서임
-            const moreClick = document.querySelector(`#${place.place_name}`);
+            // 이거 지금 됐다가 안됐다가 그럼 이거 아이디에 공백이 들어가서임
+            const moreClick = document.querySelector(`#${cardId}`);
+            console.log('클릭한 마커의 id',cardId)
             // console.log(moreClick);
-            moreClick.remove();
+            moreClick.remove(cardId);
             //이미 클릭한 식당이라면 배열에서 삭제
             placeNames = placeNames.filter(function(e){
                 return e != place.place_name; 
@@ -97,14 +111,15 @@ function displayMarker(place) {
         infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
         infowindow.open(map, marker);
 
-    //    지도 밑에 주소에대한 설명 추가되는 코드 시작
+    //   지도 밑에 주소에대한 설명 추가되는 코드 시작
         cardList = document.querySelector('#cardList')
         cardList.classList.add('card-grid');
         // 카드형태 만들기
         placeCard = document.createElement('span');
         placeCard.classList.add('card');
         // 지역 이름으로 카드에 id추가
-        placeCard.setAttribute('id',place.place_name)
+        cardId = place.place_name.replace(/ /g,"")
+        placeCard.setAttribute('id',cardId)
         cardList.append(placeCard)
         // 카드 안에 상자 2개로 나누기(이미지칸, 정보칸)
         placeImg = document.createElement('div');
@@ -115,29 +130,43 @@ function displayMarker(place) {
         // 이미지칸에 카테고리별로 이미지 변경
         const placebackImg = document.createElement('img');
        const category = place.category_group_code;
-        if(category == "FD6"){
+        if(category == "FD6"){//카테고리가 음식점일때
             placebackImg.setAttribute('src','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/d5/ce/6d/savor-the-exquisite-taste.jpg?w=600&h=-1&s=1')
             placebackImg.classList.add('cardImg')
             placeImg.append(placebackImg)
-        }else if(category == "AT4"){
+        }else if(category == "AT4"){//카테고리가 관광명소일때
             placebackImg.setAttribute('src','https://pimg.mk.co.kr/meet/neds/2020/12/image_readtop_2020_1263248_16074725144464348.jpg')
             placebackImg.classList.add('cardImg')
             placeImg.append(placebackImg)
         }
-        else{
+        else if(category == "MT1"){//카테고리가 대형마트일때
             placebackImg.setAttribute('src','https://www.thinkfood.co.kr/news/photo/201911/85600_110319_1815.jpg')
+            placebackImg.classList.add('cardImg')
+            placeImg.append(placebackImg)
+        }
+        else if(category == "AD5"){//카테고리가 숙박일때
+            placebackImg.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2BVn3DavQB6LMfnr3fbK30yQxAO0lB6ziDg&s')
             placebackImg.classList.add('cardImg')
             placeImg.append(placebackImg)
         }
     
         //정보칸에 이름 입력
         const placeTitle = document.createElement('h3');
+        placeTitle.classList.add('placeTitle')
         placeTitle.textContent = place.place_name;
         placeText.append(placeTitle);
         //정보칸에 주소 입력
         const placeAdd = document.createElement('h4');
+        placeAdd.classList.add('placeadd')
         placeAdd.textContent = place.address_name;
         placeText.append(placeAdd)
+        //정보칸에 버튼 출력
+        const placeBtn = document.createElement('button');
+        placeBtn.textContent = '자세히 알아보기';
+        placeBtn.classList.add('cardBtn');
+        placeBtn.setAttribute('onclick',`location.href = '${place.place_url}'`)
+        placeText.append(placeBtn);
+
 
         var location = document.querySelector(".card-bottom").offsetTop // 버튼이 생성된 위치의 좌표 구하기
         window.scrollTo({top:location,left:0,behavior:'smooth'}); // 구한 좌표로 스크롤
