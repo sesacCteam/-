@@ -28,6 +28,7 @@ header {
   top: 0;
   z-index: 999;
   background-color: white;
+  border-bottom: 3px solid var(--background-color);
 }
 #logo {
   width: 100%;
@@ -36,6 +37,7 @@ header {
   width: 60px;
 }
 .nav-link:hover {
+  font-weight: bold;
   color: var(--main-color);
 }
 .nav-link {
@@ -45,19 +47,90 @@ header {
   display: flex;
   font-size: 16px;
   justify-content: space-around;
-  background-color: var(--component-color);
+  background-color: white;
 }
 .footer > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+.banner-img {
+  width: 100%;
+  height: 600px;
+}
+.main-banner {
+  position: relative;
+}
+.fade-in-text {
+  position: absolute;
+  bottom: 50px;
+  right: 130px;
+  color: white;
+}
+.fade-in-text > span:nth-child(1) {
+  font-size: 10rem;
+  font-weight: bold;
+  animation: fadedown 3s;
+  display: inline-block;
+}
+.fade-in-text > span:nth-child(2) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadein 3s;
+}
+.fade-in-text > span:nth-child(3) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadeup 3s;
+  display: inline-block;
+}
+.fade-in-text > span:nth-child(4) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadeleft 3s;
+  display: inline-block;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeup {
+  from {
+    transform: translateY(70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadedown {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* Main area (section) */
 main {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 0 8rem 0 8rem;
 }
 
 .text-1 {
@@ -81,8 +154,7 @@ main {
 .content-1 {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
-  gap: 2rem;
+  margin-top: 8rem;
 }
 
 /* Flip card styles */
@@ -100,14 +172,14 @@ main {
   transition: 0.6s;
   transform-style: preserve-3d;
   border: none;
-  border-radius: 10px; /* 카드 모서리 둥글게 */
+  border-radius: 15px; /* 카드 모서리 둥글게 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 카드 쉐도우 */
 }
 
 .front > img {
   width: 100%; /* 이미지 크기에 맞게 자동 조정 */
   height: 100%; /* 이미지 비율에 맞게 조정 */
-  border-radius: 10px; /* 이미지에도 모서리 둥글게 */
+  border-radius: 15px; /* 이미지에도 모서리 둥글게 */
 }
 
 .front,
@@ -119,7 +191,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px; /* 카드 양면 모두 둥글게 */
+  border-radius: 15px; /* 카드 양면 모두 둥글게 */
 }
 
 .back {
@@ -144,7 +216,7 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 60%; /* 슬라이드 영역 전체 width */
+  width: 100%; /* 슬라이드 영역 전체 width */
   overflow: hidden;
 }
 
@@ -153,7 +225,7 @@ main {
   display: flex;
   align-items: center;
   position: relative;
-  width: 60%; /* 카드 슬라이더의 전체 너비 */
+  width: 80vw; /* 카드 슬라이더의 전체 너비 */
   overflow: hidden;
 }
 
@@ -206,17 +278,24 @@ button:hover {
   display: flex;
   justify-content: center;
   padding: 8rem;
+  background-color: var(--component-color);
 }
 .purpose {
-  flex-basis: 30%;
+  flex-basis: 40%;
   padding: 3rem;
-  height: 55rem;
+  width: 30vw;
+  height: 70vh;
   background: url(/src/image/main_page/content1bgimg.png) no-repeat bottom
     #203b7e;
   color: var(--background-color);
-  border-radius: 8px;
+  border-radius: 20px;
   background-size: 100%;
-  margin: 1.5rem;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+.purpose:hover {
+  transform: scale(1.05);
+  transition: 1s;
 }
 .purpose > div:nth-child(1) {
   font-size: 3rem;
@@ -229,52 +308,64 @@ div:nth-child(4) {
 }
 
 .purpose-2 {
-  flex-basis: 40%;
+  flex-basis: 30%;
   padding-left: 8rem;
+  width: 40vw;
 }
 .purpose-2 > div:nth-child(1) {
   font-size: 4rem;
 }
 .purpose-2 > div:nth-child(2) {
   display: flex;
+  height: 30vh;
+}
+.purpose-2 > div:nth-child(3) {
+  display: flex;
+  height: 30vh;
 }
 
 .weather {
   background: url(/src/image/main_page/weather.png);
   flex-basis: 50%;
-  height: 25rem;
+  margin-right: 1rem;
   background-position: center;
-  background-size: 100%;
-  margin: 0.5rem;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .trans {
   background: url(/src/image/main_page/transportation.png);
   flex-basis: 50%;
-  height: 25rem;
   background-position: center;
-  background-size: 100%;
-  margin: 0.5rem;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
 }
 .place {
   background: url(/src/image/main_page/seoul.png);
-  height: 24rem;
-  margin: 0.5rem;
-  border-radius: 10px;
+  flex-basis: 100%;
+  margin-top: 1rem;
+  border-radius: 20px;
   background-position: center;
-  background-size: 100%;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .weather:hover,
-.trans:hover,
-.place:hover {
+.trans:hover {
   transform: translateY(-15px);
   transition: 0.5s;
 }
+.place:hover {
+  transform: translateY(15px);
+  transition: 0.5s;
+}
+
 .weather > p,
 .trans > p,
 .place > p {
@@ -295,8 +386,10 @@ div:nth-child(4) {
   margin-top: 8rem;
 }
 .content-4 iframe {
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
+
 .content-4 > div:nth-child(1) {
   flex-basis: 30%;
 }
@@ -304,16 +397,29 @@ div:nth-child(4) {
   flex-basis: 30%;
   margin-left: 8rem;
 }
+.pr-video:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.pr-video {
+  transition: 0.5s;
+}
 
 /* -------------------------------------- */
 /* 아코디언 메뉴 */
 .content-3 {
   display: flex;
   justify-content: center;
+  margin: 8rem;
 }
-.pic_title {
+.accordion {
+  width: 100vw;
+}
+
+.pic-title {
   font-size: 4rem;
-  padding-left: 5px;
+  text-align: end;
+  padding-right: 8rem;
 }
 .gallery {
   /* position: relative; */
@@ -326,7 +432,7 @@ div:nth-child(4) {
   position: relative;
   width: 15rem;
   height: 40rem;
-  transition: 0.3s;
+  transition: 0.3s ease;
   overflow: hidden;
   cursor: pointer;
 }
