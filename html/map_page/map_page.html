@@ -39,7 +39,7 @@
       <!-- 검색어 입력 영역 -->
       <div class="textinput">
         <button class="destbutton" onclick="clickEvent()"></button>
-    <input type="text" placeholder="어디로 가고싶으신가요?" id="dest">
+    <input type="text" placeholder="어디로 가고싶으신가요?" id="dest" onkeydown="enterEvent(event)">
       </div>
       <!-- 실제 지도 표시 영역 -->
       <div id="map"></div>
@@ -54,11 +54,37 @@
       <h3 class="subText" style="color: var(--content-font-color);">관광에 필요한 교통정보를 확인해 보세요!</h2>
 
       <div class="container">
-        <div class="tripbox">자전거 여행
+        <div class="tripbox">
+          <h3>자전거 여행</h3>
+          <section class="list">
+            <!-- for 문으로 박스 크기에 맞춰서 생성되게 만들어보기 -->
+          <div class="list0">한강</div>
           <div class="list1">한강</div>
+          <div class="list3">한강</div>
+          <div class="list1">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+          <div class="list1">한강</div>
+          <div class="list3">한강</div>
+          <div class="list1">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+          <div class="list1">한강</div>
+          <div class="list3">한강</div>
+          <div class="list1">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+          <div class="list2">한강</div>
+          <div class="list3">한강</div>
+        </section>
         </div>
         <div class="tripbox">대중교통 여행</div>
         <div class="tripbox">도보 여행</div>
+        
         <!-- <div>대중교통 여행</div>
         <div>자젼거 여행</div>
         <div>도보 여행</div> -->

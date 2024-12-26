@@ -58,9 +58,10 @@ body{
     width: 33%;
     border: 1px solid black;
     border-radius: 1rem;
-
+    /* display: inline-block; */
     /* display: flex; */
     text-align: center;
+    overflow: hidden;
     padding: 2rem;
     font-size: 2rem;
     background-color: var(--component-color);
@@ -200,6 +201,29 @@ body{
     display: flex;
     justify-content: center;
 } */
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list0{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: var(--point-color);
+    line-height: 12rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.2rem;
+    
+}
+.list0:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+
+}
 .list1{
     width: 10rem;
     height: 10rem;
@@ -209,9 +233,76 @@ body{
     color: white;
     font-size: 3rem;
     font-weight: bold;
+    transform: translate(0,50%);
+
+    margin: 0.2rem;
+
 }
 .list1:hover{
-    transform: scale(1.05);
+    transform: scale(1.05) translate(0,50%);
     transition-duration: 0.5s;
 
 }
+.list2{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--point-color);
+    line-height: 5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.2rem;
+    transform: translate(0,50%);
+
+
+}
+.list2:hover{
+    transform: scale(1.05) translate(0,50%);
+    transition-duration: 0.5s;
+
+}
+.list3{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var( --sub-color);
+    line-height: 8rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.2rem;
+    transform: translate(0,40%);
+
+
+}
+.list3:hover{
+    transform: scale(1.05) translate(0,40%);
+    transition-duration: 0.5s;
+
+}
+.placeTitle{
+    font-family: "NanumSquareNeoBold";
+}
+.placeadd{
+    font-family: "NanumSquareNeoLight";
+}
+.cardBtn {
+    /* width: 40px; */
+    /* position: absolute; */
+    background-color: var(--background-color);
+    color: var(--sub-color);
+    border: 2px solid var(--component-color);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    /* transform: translateY(-50%); */
+    /* z-index: 1; */
+    border-radius: 50px;
+  }
+  
+  .cardBtn:hover{
+    background-color: var(--point-color);
+    color: var( --background-color);
+  }
