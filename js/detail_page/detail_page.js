@@ -33,7 +33,6 @@ paths.forEach((path) => {
 //지도에서 누른 구의 정보를 보여주는 것
 paths.forEach((path) => {
   path.addEventListener("click", (event) => {
-
     const regionName = document.querySelector("path.symbol");
     const dataValue = path.getAttribute("href");
     guname = path.getAttribute("alt");
@@ -85,14 +84,13 @@ containers.forEach((container) => {
 //async 가 await 짝
 const getLocalPlace = async () => {
   // 클릭했을때 이미 데이터가 있다면 한번 초기화 하기
-  if(koList !== null || placeinfor !== null || finalarr !== null ){
+  if (koList !== null || placeinfor !== null || finalarr !== null) {
     koList = [];
-    placeinfor =[];
+    placeinfor = [];
     finalarr = [];
-
   }
   const place = await fetch(
-    "http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/400"
+    "http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/1000"
   );
 
   const placeData = await place.json();
@@ -116,43 +114,64 @@ const getLocalPlace = async () => {
     }
   }
   // console.log( 'for 문 밖에 >>>>>>>>>>>>>>>>>>>>>>',koList);
-  
+
   // 구 이름으로 필터 하기
-  const placelist = koList.filter(function (koli , i) {
+  const placelist = koList.filter(function (koli, i) {
     // console.log('filter 함수 안에 >>>>>>>>>>',koli);
     if (koli.includes(guname)) {
-
       console.log("includes 안에 >>>>>>>>>>>>>>", koli.includes(guname));
-        // placename.push(koList[i+1])
-        placename = koList[i+1],
-        placeinfor.push(placename)
-      
-      return koli
+      // placename.push(koList[i+1])
+      (placename = koList[i + 1]), placeinfor.push(placename);
+
+      return koli;
     }
   });
-
 
   // console.log('여기에 식당이름 나오면 좋겠다.',placename);
 
   // console.log('식당 이름 >>>>>>>>>' , placeinfor)
   // console.log('마지막 placelist',placelist)
-// 이름배열,주소배열을 하나의 객체로 만들기
-for(i=0;i<placeinfor.length;i++){
-   let objs = {
-    id : i,
-    name : placeinfor[i],
-    address : placelist[i]
+  // 이름배열,주소배열을 하나의 객체로 만들기
+  for (i = 0; i < placeinfor.length; i++) {
+    let objs = {
+      id: i,
+      name: placeinfor[i],
+      address: placelist[i],
+    };
+    finalarr.push(objs);
   }
-  finalarr.push(objs);
-}
-// 객체 완성된거 보는거
-console.log(finalarr);
-// 이름 불러오는법
-// console.log(finalarr[0].name);
-  
-
-
+  // 객체 완성된거 보는거
+  console.log(finalarr);
+  // 이름 불러오는법
+  // console.log(finalarr[0].name);
 
   // console.log("잘됨! ", placelist);
   // 필터로 반복문을 만들어서 용산이라는 글자가 나올때까지 걸르는것
 };
+
+//데이터 정보 HTML에 표시하는 코드
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const symbolData = {
+//     종로구: {
+//       population: 100000,
+//     },
+//   };
+
+//   const symbols = document.querySelectorAll("path.symbol");
+
+//   districtData.forEach((district) => {
+//     district.addEventListener("click", (event) => {
+//       const symbolId = event.target.id;
+//       const data = symbolData[symbolId];
+
+//       if (data) {
+//         document.getElementById("symbol-name").textContent = symbolId;
+//         // document.getElementById('symbol-description').textContent = data.description
+//         // document.getElementById('symbol-population').textContent = data.population.
+//         // document.getElementById('symbol-area').textContent =
+//       }
+//     });
+//   });
+// });
+// 작동안됨
