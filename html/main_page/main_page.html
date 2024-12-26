@@ -61,7 +61,17 @@
         </div>
       </nav>
     </header>
-    <div
+    <div class="main-banner">
+      <img
+        class="banner-img"
+        src="/src/image/main_page/seoulseoulmain.png"
+        alt="배너이미지"
+      />
+      <div class="fade-in-text">
+        <span>S</span><span>eoul</span><span>s</span><span>eoul</span>
+      </div>
+    </div>
+    <!--  <div
       id="carouselExampleSlidesOnly"
       class="carousel slide"
       data-bs-ride="carousel"
@@ -69,7 +79,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="/src/image/main_page/main후보.png"
+            src="/src/image/main_page/seoulseoulmain.png"
             class="d-block w-100"
             alt="..."
           />
@@ -82,17 +92,17 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
     <main>
       <section>
         <div
           data-aos="fade-down"
           data-aos-offset="200"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="4000"
+          data-aos-duration="2000"
         >
           <div class="text-1">
-            <div>서울에서 진행되는 다양한 이벤트</div>
+            <div>서울에서 진행되는 다양한 EVENT</div>
             <div>서울 Upcoming!</div>
           </div>
         </div>
@@ -136,43 +146,45 @@
         </article>
         <article class="content-2">
           <div
-            class="purpose"
             data-aos="fade-up"
             data-aos-offset="200"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="3000"
+            data-aos-duration="2000"
           >
-            <div>Purpose of Establishment and Vision</div>
-            <br />
-            <div>
-              - To advance tourism as a key driver for national economic growth
-              and enhancement of national welfare
-            </div>
-            <div>
-              - A public organization that makes the Korean people happier, and
-              promotes national wealth through tourism
+            <div class="purpose">
+              <div>Purpose of Establishment and Vision</div>
+              <br />
+              <div>
+                - To advance tourism as a key driver for national economic
+                growth and enhancement of national welfare
+              </div>
+              <div>
+                - A public organization that makes the Korean people happier,
+                and promotes national wealth through tourism
+              </div>
             </div>
           </div>
           <div
-            class="purpose-2"
             data-aos="fade-left"
             data-aos-offset="200"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="3000"
+            data-aos-duration="2000"
           >
-            <div>Information</div>
-            <div>
-              <a class="weather" href="../weather_page/weather_page.html"
-                ><p>날씨</p></a
-              >
-              <a class="trans" href="../map_page/map_page.html"><p>교통</p></a>
-            </div>
-            <div>
-              <a href="../detail_page/detail_page.html">
-                <div class="place">
+            <div class="purpose-2">
+              <div>Information</div>
+              <div>
+                <a class="weather" href="../weather_page/weather_page.html"
+                  ><p>날씨</p>
+                </a>
+                <a class="trans" href="../map_page/map_page.html"
+                  ><p>교통</p>
+                </a>
+              </div>
+              <div>
+                <a class="place" href="../detail_page/detail_page.html">
                   <p>여행지</p>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </article>
@@ -183,12 +195,13 @@
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           >
-            <div>
-              <div class="pic_title">Related Sites</div>
+            <div class="accordion">
+              <div class="pic-title">Related Sites</div>
               <div class="gallery">
                 <div class="image-container active">
                   <a
                     href="https://www.tripadvisor.co.kr/Attractions-g294197-Activities-Seoul.html"
+                    target="_blank"
                   >
                     <img
                       src="/src/image/main_page/tripadvisor.png"
@@ -201,7 +214,10 @@
                   </a>
                 </div>
                 <div class="image-container">
-                  <a href="https://www.museum.go.kr/site/main/home">
+                  <a
+                    href="https://www.museum.go.kr/site/main/home"
+                    target="_blank"
+                  >
                     <img src="/src/image/main_page/museum.png" alt="img2" />
                     <div class="text">국립중앙박물관</div>
                     <div class="text2">National Museum of Korea</div>
@@ -210,6 +226,7 @@
                 <div class="image-container">
                   <a
                     href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+                    target="_blank"
                   >
                     <img
                       src="/src/image/main_page/GyeongbokgungPalace.png"
@@ -220,7 +237,7 @@
                   </a>
                 </div>
                 <div class="image-container">
-                  <a href="https://www.seoulcitybus.com/">
+                  <a href="https://www.seoulcitybus.com/" target="_blank">
                     <img
                       src="/src/image/main_page/citytourbus.png"
                       alt="img4"
