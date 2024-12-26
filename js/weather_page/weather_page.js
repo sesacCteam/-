@@ -17,7 +17,7 @@ const getWeather = async () => {
   iconSection.setAttribute("src", iconURL);
 
   const currentTempSection = document.querySelector(".temp");
-  const currentTemp = `${currentData.main.temp}°C`;
+  const currentTemp = `${currentData.main.temp.toFixed(1)}°C`;
   currentTempSection.textContent = currentTemp;
 
   const currentWeatherSection = document.querySelector(".weather");
@@ -46,7 +46,23 @@ const getWeather = async () => {
 
   const currentSunsetSection = document.querySelector(".sunset");
   const currentSunset = currentData.sys.sunset;
-  currentSunsetSection.textContent = `PM${convertSuntime(currentSunset)}`;
+  currentSunsetSection.textContent = `PM ${convertSuntime(currentSunset)}`;
+
+  const currentHumiditySection = document.querySelector(".humidity");
+  const currentHumidity = currentData.main.humidity;
+  currentHumiditySection.textContent = `${currentHumidity}%`;
+
+  const currentGrndLevel2Section = document.querySelector(".grnd_level");
+  const currentGrndLevel2 = currentData.main.grnd_level;
+  currentGrndLevel2Section.textContent = `${currentGrndLevel2}hPa`;
+
+  const currentVisibilitySection = document.querySelector(".visibility");
+  const currentVisibility = currentData.visibility;
+  currentVisibilitySection.textContent = `${currentVisibility}m`;
+
+  const currentFeelsLikeSection = document.querySelector(".feels_like");
+  const currentFeelsLike = currentData.main.feels_like;
+  currentFeelsLikeSection.textContent = `${currentFeelsLike.toFixed(1)}°C`;
 
   function convertSuntime(timestamp) {
     // 밀리세컨즈로 변환하여 Date 객체 생성
@@ -71,18 +87,6 @@ const getWeather = async () => {
     `https://api.openweathermap.org/data/2.5/forecast?q=Seoul&units=metric&lang=${lang}&appid=${API_KEY}`
   );
   const forecastData = await forecast.json();
-
-  const content = document.querySelectorAll(".icon");
-  function time(timeText) {
-    if (timeText > 13) {
-      return `오후 ${timeText - 12}시`;
-    } else {
-      return `오전 ${timeText}시`;
-    }
-  }
-
-  console.log(forecastData);
-
   // 현재 날씨 목록
   for (let i = 0; i < 6; i++) {
     const right_top_wrapper = document.querySelector(".right-top-wrapper");
@@ -91,14 +95,12 @@ const getWeather = async () => {
     right_top_container.classList.add("right-top-container");
     right_top_wrapper.append(right_top_container);
 
-    // document.querySelector(".right-top-wrapper").append(right_top_container);
-
-    console.log(forecastData);
     const time = document.createElement("div");
     const timeValue = forecastData.list[i].dt_txt;
-    let timeText = Number(timeValue.split(" ")[1].split(":")[0]);
-    console.log(timeValue);
-    console.log(timeText);
+    let timeText = Number(timeValue.split(" ")[1].split(":")[0]) + 9;
+
+    if (timeText >= 24) timeText -= 24;
+
     if (timeText === 0) {
       timeText = "오전 12시";
     } else if (timeText > 13) {
@@ -111,21 +113,16 @@ const getWeather = async () => {
     time.innerText = timeText;
     right_top_container.append(time);
 
-    // document.querySelector(".right_top_container").append(time);
-
     const iconScr = forecastData.list[i].weather[0].icon;
     const iconURL = `http://openweathermap.org/img/wn/${iconScr}@2x.png`;
     const icon = document.createElement("img");
     icon.setAttribute("src", iconURL);
-    // document.querySelector(".right_top_container").append(icon);
     right_top_container.append(icon);
-    // console.log(iconScr);
 
     const div = document.createElement("div");
     const divText = forecastData.list[i].main.temp;
-    div.innerText = `${divText}°`;
+    div.innerText = `${divText.toFixed(1)}°`;
     right_top_container.append(div);
-    // document.querySelector(".right_top_container").append(div);
   }
 
   for (let i = 0; i < forecastData.list.length; i = i + 8) {
@@ -147,13 +144,16 @@ const getWeather = async () => {
 
     const max_tamp = document.createElement("div");
     const max_tamp_Value = forecastData.list[i].main.temp_max;
-    max_tamp.innerText = `${max_tamp_Value}°`;
+    max_tamp.innerText = `${max_tamp_Value.toFixed(1)}°`;
     forecast_left.append(max_tamp);
-    forecast_left.append(max_tamp);
+
+    const dash = document.createElement("div");
+    dash.innerText = "/";
+    forecast_left.append(dash);
 
     const min_tamp = document.createElement("div");
     const min_tamp_Value = forecastData.list[i].main.temp_min;
-    min_tamp.innerText = `${min_tamp_Value}°`;
+    min_tamp.innerText = `${min_tamp_Value.toFixed(1)}°`;
     forecast_left.append(min_tamp);
 
     const date = document.createElement("div");
@@ -186,10 +186,6 @@ const getWeather = async () => {
   const currentO3Section = document.querySelector(".o3");
   const currentO3 = airPollutionData.list[0].components.o3;
   currentO3Section.textContent = currentO3;
-
-  // const currentO3Section = document.querySelector(".o3");
-  // const currentO3 = airPollutionData.list[0].components.o3;
-  // currentO3Section.textContent = currentO3;
 };
 
 getWeather();
