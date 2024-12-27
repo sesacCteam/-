@@ -103,15 +103,15 @@ const getLocalPlace = async () => {
   for (let i = 0; i < 3; i++) {
     if (i == 0) {
       place = await fetch(
-        `https://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/1000`
+        `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/1000`
       );
     } else if (i == 1) {
       place = await fetch(
-        `https://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1001/2000`
+        `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1001/2000`
       );
     } else if (i == 2) {
       place = await fetch(
-        `https://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/2001/2199`
+        `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/2001/2199`
       );
     }
     const placeData = await place.json();
