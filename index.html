@@ -22,9 +22,12 @@
   <body>
     <header>
       <nav class="navbar bg-body-white">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="#"
-            ><img id="logo" src="..." alt="로고"
+            ><img
+              id="logo"
+              src="/src/image/main_page/seoulseoullogo.png"
+              alt="로고"
           /></a>
           <a class="nav-link" href="/html/detail_page/detail_page.html"
             >여행지</a
@@ -109,41 +112,13 @@
         </div>
         <article class="content-1">
           <!-- 슬라이드 영역과 버튼을 감싸는 div -->
+          <button class="prev-btn">⬅︎</button>
           <div class="slider-wrapper">
-            <button class="prev-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-arrow-left"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
-                />
-              </svg>
-            </button>
             <div class="card-slider">
               <!-- 카드 요소들이 추가되는 영역-->
             </div>
-            <button class="next-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-arrow-right"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                />
-              </svg>
-            </button>
           </div>
+          <button class="next-btn">➡︎</button>
         </article>
         <article class="content-2">
           <div
@@ -271,7 +246,7 @@
               ></iframe>
             </div>
           </div>
-          <div>contents</div>
+          <!-- <div>contents</div> -->
         </article>
         <!-- 페이드효과 aos 라이브러리 예시 사용 -->
         <!-- <div
@@ -286,7 +261,9 @@
     </main>
     <footer>
       <div class="footer">
-        <div><img src="/src/image/main_page/logo.png" alt="" /></div>
+        <div>
+          <img src="/src/image/main_page/seoulseoullogo.png" alt="로고" />
+        </div>
         <div>
           <div>
             <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
