@@ -181,8 +181,13 @@ function clickEvent() {
         );
         placeText.append(placeBtn);
 
-        var location = document.querySelector(".card-bottom").offsetTop; // 버튼이 생성된 위치의 좌표 구하기
-        window.scrollTo({ top: location, left: 0, behavior: "smooth" }); // 구한 좌표로 스크롤
+        var btnTop = document.querySelector(".card-top")
+        var location =  window.pageYOffset + btnTop.getBoundingClientRect().top;
+        window.scrollTo({top:location, bbehavior : "smooth"})
+        
+        // var location = document.querySelector(".cardBtn").getBoundingClientRect(); 
+        // console.log(location)// 버튼이 생성된 위치의 좌표 구하기
+        // window.scrollTo({ top: location.top, behavior: "smooth" }); // 구한 좌표로 스크롤
       }
       // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
       // console.log(place)

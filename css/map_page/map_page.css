@@ -11,8 +11,107 @@ body{
     padding:0 8rem 0 8rem;
     
 }
+.tripgallery{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+    /* overflow: hidden; */
+    cursor: pointer;
+}
+.tripImg1{
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+  /* padding: 5px; */
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-position: 50% 70%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+   url(https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800);
+}
+.tripImg1:hover{
+    height: 100%;
+    transition-duration: 1s;
+    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800);
+}
+
+.tripImg2{
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    /* padding: 5px; */
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+     url(https://cdn.crowdpic.net/detail-thumb/thumb_d_6673FAB4A1F590A23E4825B00473A6DB.jpg);
+  }
+  .tripImg2:hover{
+      height: 100%;
+      transition-duration: 1s;
+    background-image: 
+    url(https://cdn.crowdpic.net/detail-thumb/thumb_d_6673FAB4A1F590A23E4825B00473A6DB.jpg);
+    }
 
 
+    .tripImg3{
+        width: 100%;
+        height: 20%;
+        object-fit: cover;
+        /* padding: 5px; */
+        margin-top: 1rem;
+        border-radius: 20px;
+        background-position: 50% 70%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+        url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
+    }
+      .tripImg3:hover{
+          height: 100%;
+          transition-duration: 1s;
+          background-image: 
+            url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
+        }
+        .tripImg4{
+            width: 100%;
+            height: 20%;
+            object-fit: cover;
+            /* padding: 5px; */
+            margin-top: 1rem;
+            border-radius: 20px;
+            background-position: 50% 70%;
+            background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+            url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+        }
+          .tripImg4:hover{
+              height: 100%;
+              transition-duration: 1s;
+              background-image: 
+                url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+                }
+                .tripImg4{
+                    width: 100%;
+                    height: 20%;
+                    object-fit: cover;
+                    /* padding: 5px; */
+                    margin-top: 1rem;
+                    border-radius: 20px;
+                    background-position: 50% 70%;
+                    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+                    url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+                }
+                  .tripImg4:hover{
+                      height: 100%;
+                      transition-duration: 1s;
+                      background-image: 
+                        url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+                        }
+.triptext{
+    color: white;
+    text-align: center;
+    /* line-height: ; */
+    transform: translate(0% , 50%);
+
+}
 .title{
     /* border: 1px solid black; */
     margin-top: 80px;
@@ -43,7 +142,7 @@ body{
 .container{
     display: flex;
     justify-content: space-between;
-    margin-top: 36px;
+    /* margin-top: 36px; */
     width: calc(100vw - 16rem);
     /* justify-content: space-between; */
     /* display: flex; */
@@ -53,20 +152,7 @@ body{
     justify-content: center;
 
 } */
-.tripbox{
-    height: 40vh;
-    width: 33%;
-    border: 1px solid black;
-    border-radius: 1rem;
-    /* display: inline-block; */
-    /* display: flex; */
-    text-align: center;
-    overflow: hidden;
-    padding: 2rem;
-    font-size: 2rem;
-    background-color: var(--component-color);
-    
-}
+
 .mainBox{
     /* border: 1px solid black; */
     width: 33%;
@@ -207,80 +293,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
-.list0{
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background-color: var(--point-color);
-    line-height: 12rem;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0.2rem;
-    
-}
-.list0:hover{
-    transform: scale(1.05);
-    transition-duration: 0.5s;
 
-}
-.list1{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    background-color: var(--main-color);
-    line-height: 10rem;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    transform: translate(0,50%);
-
-    margin: 0.2rem;
-
-}
-.list1:hover{
-    transform: scale(1.05) translate(0,50%);
-    transition-duration: 0.5s;
-
-}
-.list2{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-color: var(--point-color);
-    line-height: 5rem;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.2rem;
-    transform: translate(0,50%);
-
-
-}
-.list2:hover{
-    transform: scale(1.05) translate(0,50%);
-    transition-duration: 0.5s;
-
-}
-.list3{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    background-color: var( --sub-color);
-    line-height: 8rem;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0.2rem;
-    transform: translate(0,40%);
-
-
-}
-.list3:hover{
-    transform: scale(1.05) translate(0,40%);
-    transition-duration: 0.5s;
-
-}
 .placeTitle{
     font-family: "NanumSquareNeoBold";
 }
@@ -306,3 +319,48 @@ body{
     background-color: var(--point-color);
     color: var( --background-color);
   }
+
+  .tripul{
+    list-style-type: none;
+    /* line-height: 35rem; */
+
+  }
+  .triplist{
+    /* line-height: 35rem; */
+    height: 35rem;
+  }
+  .triptitleArea{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-around;
+    /* box-shadow: 0 16px 16px rgba(0,0,0,0.12),  */
+    /* border-bottom: 1px solid black; */
+  }
+  .tripboxArea{
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .triptitle{
+    width: 100%;
+    /* padding: 33%; */
+    text-align: center;
+    
+    border-bottom: 1px solid black;
+
+  }
+  .tripbox{
+    height: 50rem;
+    width: 33%;
+    margin: 2rem;
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+    /* display: inline-block; */
+    /* display: flex; */
+    text-align: center;
+    /* overflow: hidden; */
+    /* padding-top: 2rem; */
+    font-size: 2rem;
+    /* background-color: var(--component-color) */
+    
+}
