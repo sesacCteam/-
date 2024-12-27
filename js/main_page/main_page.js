@@ -2,59 +2,59 @@
 const cardData = {
   card1: {
     image: "/src/image/main_page/seoulcardimg1.png",
-    title: "관악별빛산책 1",
+    title: "관악별빛산책",
     date: "2024.11.11 ~ 2025.02.09",
     location: "별빛내린천",
-    description: "3개월동안 진행되는 관악별빛 산책 1!!",
+    description: "3개월동안 진행되는 관악별빛 산책",
   },
   card2: {
     image: "/src/image/main_page/seoulcardimg2.png",
-    title: "서울밤하늘산책 2",
+    title: "서울밤하늘산책",
     date: "2025.01.01 ~ 2025.03.01",
     location: "서울숲",
-    description: "서울의 아름다운 밤하늘을 산책 2!",
+    description: "서울의 아름다운 밤하늘을 산책",
   },
   card3: {
     image: "/src/image/main_page/seoulcardimg3.png",
-    title: "한강별빛산책 3",
+    title: "한강별빛산책",
     date: "2025.02.01 ~ 2025.04.01",
     location: "한강공원",
-    description: "한강을 따라 별빛 산책을 즐겨보세요 3!",
+    description: "한강을 따라 별빛 산책을 즐겨보세요",
   },
   card4: {
     image: "/src/image/main_page/seoulcardimg4.png",
-    title: "도심별빛산책 4",
+    title: "도심별빛산책",
     date: "2025.03.01 ~ 2025.05.01",
     location: "도심지",
-    description: "도심에서 별빛 산책을 즐기세요 4!",
+    description: "도심에서 별빛 산책을 즐기세요",
   },
   card5: {
     image: "/src/image/main_page/seoulcardimg5.png",
-    title: "서울여행산책 5",
+    title: "서울여행산책",
     date: "2025.04.01 ~ 2025.06.01",
     location: "서울여행",
-    description: "서울을 여행하며 산책 5!",
+    description: "서울을 여행하며 산책",
   },
   card6: {
     image: "/src/image/main_page/seoulcardimg6.png",
-    title: "자연별빛산책 6",
+    title: "자연별빛산책",
     date: "2025.05.01 ~ 2025.07.01",
     location: "자연속",
-    description: "자연 속에서 별빛 산책 6!",
+    description: "자연 속에서 별빛 산책",
   },
   card7: {
     image: "/src/image/main_page/seoulcardimg7.png",
-    title: "자연별빛산책 7",
+    title: "자연별빛산책",
     date: "2025.05.01 ~ 2025.07.01",
     location: "자연속",
-    description: "자연 속에서 별빛 산책 7!",
+    description: "자연 속에서 별빛 산책",
   },
   card8: {
     image: "/src/image/main_page/seoulcardimg8.png",
-    title: "자연별빛산책 8",
+    title: "자연별빛산책",
     date: "2025.05.01 ~ 2025.07.01",
     location: "자연속",
-    description: "자연 속에서 별빛 산책 8!",
+    description: "자연 속에서 별빛 산책",
   },
 };
 
@@ -167,3 +167,5 @@ containers.forEach((container) => {
     container.classList.add("active");
   });
 });
+
+/* --------------------------------------------- */
