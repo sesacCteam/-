@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mainPage</title>
+
+    <!-- CDN links (css) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- CDN links (JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main_page/main_page.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img id="logo" src="..." alt="로고"
+          /></a>
+          <a class="nav-link" href="/html/detail_page/detail_page.html"
+            >여행지</a
+          >
+          <a class="nav-link" href="/html/weather_page/weather_page.html"
+            >날씨</a
+          >
+          <a class="nav-link" href="/html/map_page/map_page.html">교통</a>
+          <div class="dropdown">
+            <a
+              class="btn btn-white dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"
+                />
+              </svg>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">ENGLISH</a></li>
+              <li><a class="dropdown-item" href="#">한국어</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="main-banner">
+      <img
+        class="banner-img"
+        src="/src/image/main_page/seoulseoulmain.png"
+        alt="배너이미지"
+      />
+      <div class="fade-in-text">
+        <span>S</span><span>eoul</span><span>s</span><span>eoul</span>
+      </div>
+    </div>
+    <!--  <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/src/image/main_page/seoulseoulmain.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/src/image/main_page/main후보.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div> -->
+    <main>
+      <section>
+        <div
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          <div class="text-1">
+            <div>서울에서 진행되는 다양한 EVENT</div>
+            <div>서울 Upcoming!</div>
+          </div>
+        </div>
+        <article class="content-1">
+          <!-- 슬라이드 영역과 버튼을 감싸는 div -->
+          <div class="slider-wrapper">
+            <button class="prev-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                />
+              </svg>
+            </button>
+            <div class="card-slider">
+              <!-- 카드 요소들이 추가되는 영역-->
+            </div>
+            <button class="next-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </button>
+          </div>
+        </article>
+        <article class="content-2">
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div class="purpose">
+              <div>Purpose of Establishment and Vision</div>
+              <br />
+              <div>
+                - To advance tourism as a key driver for national economic
+                growth and enhancement of national welfare
+              </div>
+              <br />
+              <div>
+                - A public organization that makes the Korean people happier,
+                and promotes national wealth through tourism
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div class="purpose-2">
+              <div>Information</div>
+              <div>
+                <a class="weather" href="../weather_page/weather_page.html"
+                  ><p>날씨</p>
+                </a>
+                <a class="trans" href="../map_page/map_page.html"
+                  ><p>교통</p>
+                </a>
+              </div>
+              <div>
+                <a class="place" href="../detail_page/detail_page.html">
+                  <p>여행지</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="content-3">
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div class="accordion">
+              <div class="pic-title">Related Sites</div>
+              <div class="gallery">
+                <div class="image-container active">
+                  <a
+                    href="https://www.tripadvisor.co.kr/Attractions-g294197-Activities-Seoul.html"
+                    target="_blank"
+                  >
+                    <img
+                      src="/src/image/main_page/tripadvisor.png"
+                      alt="img1"
+                    />
+                    <div class="text">Tripadvisor</div>
+                    <div class="text2">
+                      Tripadvisor와 함께<br />여행을 계획하세요
+                    </div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a
+                    href="https://www.museum.go.kr/site/main/home"
+                    target="_blank"
+                  >
+                    <img src="/src/image/main_page/museum.png" alt="img2" />
+                    <div class="text">국립중앙박물관</div>
+                    <div class="text2">National Museum of Korea</div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a
+                    href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+                    target="_blank"
+                  >
+                    <img
+                      src="/src/image/main_page/GyeongbokgungPalace.png"
+                      alt="img3"
+                    />
+                    <div class="text">경복궁</div>
+                    <div class="text2">조선왕조 제일의 법궁(法宮)</div>
+                  </a>
+                </div>
+                <div class="image-container">
+                  <a href="https://www.seoulcitybus.com/" target="_blank">
+                    <img
+                      src="/src/image/main_page/citytourbus.png"
+                      alt="img4"
+                    />
+                    <div class="text">서울시티투어</div>
+                    <div class="text2">
+                      서울시티투어버스와 함께<br />새로운 매력의 서울을
+                      만나보세요
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="content-4">
+          <div class="pr-video">
+            <div>PR Video</div>
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/30Blp07ZBf8?si=0v9RFptF4oC4vnJ-"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div>contents</div>
+        </article>
+        <!-- 페이드효과 aos 라이브러리 예시 사용 -->
+        <!-- <div
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+          [요소 공간]
+          </div> -->
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div><img src="/src/image/main_page/logo.png" alt="" /></div>
+        <div>
+          <div>
+            <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
+            Gangwon State 26464, Republic of Korea
+          </div>
+          <div>Copyright © SEOULSEOUL. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+    <!-- AOS 스크립트 시작 -->
+    <script>
+      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+    <!-- 스크립트 태그 위치 주의!! -->
+    <script src="/js/main_page/main_page.js"></script>
+  </body>
+</html>

@@ -1,0 +1,479 @@
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-color: #0078d7;
+  --point-color: #f27935;
+  --sub-color: #5eb3ff;
+  --background-color: #f4f8fc;
+  --component-color: #cee5fd;
+  --title-font-color: #333333;
+  --content-font-color: #555555;
+  --disabled-color: #b3c1d1;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  border-bottom: 3px solid var(--background-color);
+}
+#logo {
+  width: 100%;
+}
+.navbar-brand {
+  width: 60px;
+}
+.nav-link:hover {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.nav-link {
+  font-size: 18px;
+}
+.footer {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-around;
+  background-color: white;
+}
+.footer > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: 600px;
+}
+.main-banner {
+  position: relative;
+}
+.fade-in-text {
+  position: absolute;
+  bottom: 50px;
+  right: 130px;
+  color: white;
+}
+.fade-in-text > span:nth-child(1) {
+  font-size: 10rem;
+  font-weight: bold;
+  animation: fadedown 3s;
+  display: inline-block;
+}
+.fade-in-text > span:nth-child(2) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadein 3s;
+}
+.fade-in-text > span:nth-child(3) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadeup 3s;
+  display: inline-block;
+}
+.fade-in-text > span:nth-child(4) {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: fadeleft 3s;
+  display: inline-block;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeup {
+  from {
+    transform: translateY(70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadedown {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Main area (section) */
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.text-1 > div:first-child {
+  font-size: 1.6rem;
+}
+
+.text-1 > div:nth-child(2) {
+  color: var(--main-color);
+  font-size: 4rem;
+}
+
+/* Card Slider */
+.content-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+/* Flip card styles */
+.flip {
+  position: relative;
+  perspective: 1100px;
+  width: 20rem; /* 이미지에 맞게 카드 크기 자동 설정 */
+  height: 25rem; /* 이미지에 맞게 카드 크기 자동 설정 */
+}
+
+.card {
+  width: 100%; /* 카드 크기가 이미지 크기에 맞게 설정 */
+  height: 100%; /* 카드 크기가 이미지 크기에 맞게 설정 */
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  border: none;
+  border-radius: 15px; /* 카드 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 카드 쉐도우 */
+}
+
+.front > img {
+  width: 100%; /* 이미지 크기에 맞게 자동 조정 */
+  height: 100%; /* 이미지 비율에 맞게 조정 */
+  border-radius: 15px; /* 이미지에도 모서리 둥글게 */
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px; /* 카드 양면 모두 둥글게 */
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: var(--component-color); /* 배경색 설정 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 쉐도우 적용 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flip:hover .card {
+  transform: rotateY(180deg);
+  transition: ease-in-out 600ms;
+  background-color: var(--component-color);
+}
+
+/* Card slider container */
+.card-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; /* 슬라이드 영역 전체 width */
+  overflow: hidden;
+}
+
+/* Slider wrapper and buttons */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80vw; /* 카드 슬라이더의 전체 너비 */
+  overflow: hidden;
+}
+
+.card-slider {
+  display: flex;
+  height: 30rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.flip {
+  flex: 0 0 auto; /* 카드 크기를 이미지 크기에 맞게 자동 설정 */
+  margin: 0 10px; /* 카드 간 간격 */
+}
+
+button {
+  width: 40px;
+  position: absolute;
+  background-color: var(--background-color);
+  color: var(--sub-color);
+  border: 2px solid var(--component-color);
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: var(--component-color);
+  transition: 1s;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼에 쉐도우 추가 */
+}
+
+/* --------------------------------------------- */
+
+.content-2 {
+  display: flex;
+  justify-content: center;
+  padding: 8rem;
+  background-color: var(--component-color);
+}
+.purpose {
+  flex-basis: 40%;
+  padding: 3rem;
+  width: 30vw;
+  height: 70vh;
+  background: url(/src/image/main_page/content1bgimg.png) no-repeat bottom
+    #203b7e;
+  color: var(--background-color);
+  border-radius: 20px;
+  background-size: 100%;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+.purpose:hover {
+  transform: scale(1.05);
+  transition: 1s;
+}
+.purpose > div:nth-child(1) {
+  font-size: 2.5vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.purpose > div:nth-child(3),
+div:nth-child(5) {
+  font-size: 1.5vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.purpose-2 {
+  flex-basis: 30%;
+  padding-left: 8rem;
+  width: 40vw;
+}
+.purpose-2 > div:nth-child(1) {
+  font-size: 4rem;
+}
+.purpose-2 > div:nth-child(2) {
+  display: flex;
+  height: 30vh;
+}
+.purpose-2 > div:nth-child(3) {
+  display: flex;
+  height: 30vh;
+}
+
+.weather {
+  background: url(/src/image/main_page/weather.png);
+  flex-basis: 50%;
+  margin-right: 1rem;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.trans {
+  background: url(/src/image/main_page/transportation.png);
+  flex-basis: 50%;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+}
+.place {
+  background: url(/src/image/main_page/seoul.png);
+  flex-basis: 100%;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-position: center;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.weather:hover,
+.trans:hover {
+  transform: translateY(-15px);
+  transition: 0.5s;
+}
+.place:hover {
+  transform: translateY(15px);
+  transition: 0.5s;
+}
+
+.weather > p,
+.trans > p,
+.place > p {
+  font-size: 3rem;
+  color: var(--background-color);
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.purpose-2 a {
+  text-decoration: none;
+}
+
+.content-4 {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  margin-top: 8rem;
+}
+.content-4 iframe {
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.content-4 > div:nth-child(1) {
+  flex-basis: 30%;
+}
+.content-4 > div:nth-child(2) {
+  flex-basis: 30%;
+  margin-left: 8rem;
+}
+.pr-video:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.pr-video {
+  transition: 0.5s;
+}
+
+/* -------------------------------------- */
+/* 아코디언 메뉴 */
+.content-3 {
+  display: flex;
+  justify-content: center;
+  margin: 8rem;
+}
+.accordion {
+  width: 100vw;
+}
+
+.pic-title {
+  font-size: 4rem;
+  text-align: end;
+  padding-right: 8rem;
+}
+.gallery {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+}
+
+/* /////////// */
+.image-container {
+  position: relative;
+  width: 15rem;
+  height: 40rem;
+  transition: 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 20px;
+}
+.image-container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  writing-mode: vertical-lr;
+  padding: 5px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.image-container.active {
+  width: 70rem;
+}
+
+.image-container.active .text {
+  writing-mode: horizontal-tb;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.image-container .text2 {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  font-size: 3rem;
+}
+.image-container.active .text2 {
+  writing-mode: horizontal-tb;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.7s ease-in;
+  opacity: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
