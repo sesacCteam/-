@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 8rem 0px;
+}
+
+.title {
+  height: 200px;
+  line-height: 200px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-title {
+  color: var(--main-color);
+  width: 80%;
+  text-align: center;
+  height: 80px;
+  font-size: 32px;
+  margin-top: 80px;
+  border-top: 1px solid gray;
+  padding-top: 30px;
+}
+
+.none {
+  border: none;
+}
+
+.subwayImg {
+  height: 600px;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  margin: 70px 0px;
+}
+
+.text {
+  text-align: center;
+  line-height: 250%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.card2 {
+  width: 70%;
+  border-radius: 20px;
+}
