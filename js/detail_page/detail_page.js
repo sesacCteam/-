@@ -1,7 +1,7 @@
 //지도 누르고 나서 색 유지시키는것
 let place;
 const paths = document.querySelectorAll("path.symbol");
-const infoBox = document.getElementById("infoBox");
+// const infoBox = document.getElementById("infoBox");
 let guname = "";
 let placename = "";
 // let placelist = [];
@@ -27,17 +27,24 @@ paths.forEach((path) => {
 
     // 선택한 path의 정보를 infoBox에 표시
     const info = path.getAttribute("href");
-    infoBox.textContent = `${info}`;
+    // infoBox.textContent = `${info}`;
   });
 });
 
 //지도에서 누른 구의 정보를 보여주는 것
 paths.forEach((path) => {
   path.addEventListener("click", (event) => {
+    //배열에 null이 아니면 초기화해라
+    const infoBox = document.querySelector("#infoBox");
+    infoBox.innerHTML = ""; // 기존 정보를 초기화
+
+    const cardList = document.querySelector("#cardList");
+    cardList.innerHTML = ""; // 카드 리스트 초기화
+
     const regionName = document.querySelector("path.symbol");
     const dataValue = path.getAttribute("href");
     guname = path.getAttribute("alt");
-    infoBox.textContent = `${dataValue}의 정보를 여기에 표시`;
+    path.removeAttribute("href");
     infoBox.style.display = "block";
     console.log(guname);
     getLocalPlace();
@@ -170,31 +177,132 @@ const getLocalPlace = async () => {
   placetitle.textContent = guname;
   infoBox.append(placetitle);
 
-  for (i = 0; i < finalarr.length; i++) {
-    let finalarrName = document.createElement("h3");
-    finalarrName.textContent = finalarr[i].name;
-    let finalarrAdd = document.createElement("h4");
-    finalarrAdd.textContent = finalarr[i].address;
-    infoBox.append(finalarrName);
-    infoBox.append(finalarrAdd);
+  // for (i = 0; i < finalarr.length; i++) {
+  //   let finalarrName = document.createElement("h3");
+  //   finalarrName.textContent = finalarr[i].name;
+  //   let finalarrAdd = document.createElement("h4");
+  //   finalarrAdd.textContent = finalarr[i].address;
+  //   cardList.append(finalarrName);
+  //   cardList.append(finalarrAdd);
+
+  //   cardList = document.querySelector("#cardList");
+  //   cardList.classList.add("card-grid");
+
+  //   placeCard = document.createElement("span");
+  //   placeCard.classList.add("card");
+
+  //   placeImg = document.createElement("img");
+  //   placeImg.classList.add("card-top");
+  //   img.setAttribute(
+  //     "src",
+  //     "./src/image/detail_page/서울시 광고1png.png" //이미지 사진 주소
+  //   );
+  //   placeText = document.createElement("div");
+  //   placeText.classList.add("card-bottom");
+  //   placeCard.append(placeImg, placeText);
+  // }
+
+  // 데이터를 가공 및 준비
+  let preparedCards = []; // 가공된 데이터를 담을 배열
+
+  for (let i = 0; i < finalarr.length; i++) {
+    let cardData = {
+      name: finalarr[i].name,
+      address: finalarr[i].address,
+      image: `/src/image/detail_page/사진${i}.png`, // 각 카드에 사용할 이미지 경로
+    };
+    preparedCards.push(cardData); // 가공된 카드 데이터를 배열에 추가
+  }
+
+  // 화면에 카드 생성
+  for (let i = 0; i < preparedCards.length; i++) {
+    let cardData = preparedCards[i]; // 각 카드 데이터 가져오기
+
+    // 카드 컨테이너 가져오기
+    let cardList = document.querySelector("#cardList");
+    cardList.classList.add("card-grid");
+
+    // 카드 요소 생성
+    let placeCard = document.createElement("span");
+    placeCard.classList.add("card");
+
+    // 카드 상단 이미지
+    let placeImg = document.createElement("img");
+    placeImg.classList.add("card-top");
+    placeImg.setAttribute("src", cardData.image); // 이미지 설정
+    placeCard.appendChild(placeImg);
+
+    // 카드 하단 텍스트 컨테이너
+    let placeText = document.createElement("div");
+    placeText.classList.add("card-bottom");
+
+    // 카드 제목 추가
+    let placeTitle = document.createElement("h3");
+    placeTitle.textContent = cardData.name;
+    placeText.appendChild(placeTitle);
+
+    // 카드 주소 추가
+    let placeAddress = document.createElement("h4");
+    placeAddress.textContent = cardData.address;
+    placeText.appendChild(placeAddress);
+
+    // 카드에 하단 텍스트 추가
+    placeCard.appendChild(placeText);
+
+    // 카드 리스트에 카드 추가
+    cardList.appendChild(placeCard);
   }
 };
 
-let finalarrName = document.createElement("h3");
-placeTitle.classList.add("placeTitle");
-placeTitle.textContent = place.place_name;
-placeText.append(placeTitle);
-//정보칸에 주소 입력
-const placeAdd = document.createElement("h4");
-placeAdd.classList.add("placeadd");
-placeAdd.textContent = place.address_name;
-placeText.append(placeAdd);
-//정보칸에 버튼 출력
-const placeBtn = document.createElement("button");
-placeBtn.textContent = "자세히 알아보기";
-placeBtn.classList.add("cardBtn");
-placeBtn.setAttribute("onclick", `location.href = '${place.place_url}'`);
-placeText.append(placeBtn);
+// ///////////////////
+// const infoBox = document.querySelector("#infoBox");
+// infoBox.innerHTML = ""; // 이전 내용 초기화
+
+// // 제목 추가
+// const placetitle = document.createElement("h2");
+// placetitle.textContent = guname;
+// infoBox.appendChild(placetitle);
+
+// // 카드 리스트 컨테이너 생성
+// const cardList = document.createElement("div");
+// cardList.classList.add("card-grid");
+// infoBox.appendChild(cardList);
+
+// // 카드 생성 및 추가
+// for (let i = 0; i < finalarr.length; i++) {
+//   // 카드 컨테이너
+//   const card = document.createElement("div");
+//   card.classList.add("card");
+
+//   // 카드 상단 이미지
+//   const cardImage = document.createElement("div");
+//   cardImage.classList.add("card-top");
+//   cardImage.style.backgroundImage = `url('/path/to/image.jpg')`; // 이미지 경로 추가 (임시)
+
+//   // 카드 하단 텍스트
+//   const cardText = document.createElement("div");
+//   cardText.classList.add("card-bottom");
+
+//   // 장소 이름
+//   const finalarrName = document.createElement("h3");
+//   finalarrName.textContent = finalarr[i].name;
+
+//   // 장소 주소
+//   const finalarrAdd = document.createElement("h4");
+//   finalarrAdd.textContent = finalarr[i].address;
+
+//   // 텍스트를 카드 하단에 추가
+//   cardText.appendChild(finalarrName);
+//   cardText.appendChild(finalarrAdd);
+
+//   // 이미지와 텍스트를 카드에 추가
+//   card.appendChild(cardImage);
+//   card.appendChild(cardText);
+
+//   // 카드 리스트에 카드 추가
+//   cardList.appendChild(card);
+// }
+
 //데이터 정보 HTML에 표시하는 코드
 
 // document.addEventListener("DOMContentLoaded", () => {

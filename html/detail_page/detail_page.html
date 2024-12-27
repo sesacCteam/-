@@ -15,66 +15,9 @@
 
     <script src="/js/detail_page/detail_page.js" defer></script>
 
-    <style>
-      body {
-        font-family: "NanumSquareNeo";
-        text-align: center;
-        /* padding: 8rem; */
-        display: flex;
-        flex-direction: column;
-      }
-      svg {
-        width: 80%;
-        height: auto;
-      }
-      path {
-        fill: #f0f0f0;
-        stroke: #fff;
-        stroke-width: 2;
-        transition: fill 0.3s;
-        pointer-events: all;
-        cursor: pointer;
-      }
-
-      path:hover {
-        fill: #f27935;
-      }
-
-      path.active {
-        fill: #f27935;
-      }
-
-      text {
-        font-size: 10px;
-        pointer-events: none;
-      }
-
-      #infoBox {
-        margin-top: 20px;
-        padding: 10px;
-        border: 1px solid #000;
-        display: none;
-      }
-      .symbol {
-        stroke-linejoin: round;
-        stroke: #ffffff;
-        stroke-width: 2;
-        fill: #0078d7;
-      }
-      .label {
-        font-family: "NanumSquare";
-        font-weight: 600;
-        stroke-opacity: 1;
-        text-anchor: middle;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill: #ffffff;
-        font-size: 30px;
-      }
-      .label.no {
-        fill: #f0f0f0;
-      }
-    </style>
+    <!-- <style>
+      
+    </style> -->
     <link
       href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
       rel="stylesheet"
@@ -144,7 +87,7 @@
           d=" M 1264 807 l 1 0 l 0 1 l 0 1 l 0 1 l 0 1 l 0 2 l 0 1 l 0 1 l 0 1 l 0 1 l 0 3 l 0 2 l 0 1 l 0 2 l 0 1 l 0 3 l 0 2 l 0 1 l 0 1 l 0 1 l 0 1 l 0 1 l 1 2 l -1 0 l 1 1 l 0 1 l 0 1 l 0 1 l 0 2 l 0 1 l 0 1 l 0 1 l 0 1 l 0 1 l 9 0 l 3 0 l 2 0 l 1 1 l 0 1 l 0 1 l 0 1 l 0 1 l 0 1 l 1 0 l -1 0 l 0 1 l 0 1 l 0 1 l 0 1 l -1 0 l 0 1 l 0 1 l -1 1 l -1 1 l 0 1 l -1 1 l -1 0 l 0 1 l -1 0 l 0 1 l -1 0 l -1 1 l -1 0 l -1 1 l -1 0 l 0 1 l -1 1 l -1 1 l -1 1 l -1 1 l -1 2 l 0 1 l -1 0 l 0 2 l 0 1 l 0 1 l -1 1 l 0 1 l 0 1 l -1 0 l 0 1 l -1 0 l 0 1 l -1 0 l 0 1 l 2 0 l 0 1 l 0 1 l 0 2 l 0 3 l -1 0 l 0 1 l -2 0 l -1 1 l -1 0 l -1 0 l -1 0 l 0 -1 l -1 0 l -1 0 l 0 -1 l -1 1 l -1 0 l -1 0 l -1 0 l 0 1 l -1 0 l -1 0 l -1 0 l 1 2 l -1 0 l 0 -1 l -1 0 l -2 1 l -1 0 l 0 1 l -2 1 l -1 0 l -1 1 l -1 1 l -1 2 l 0 1 l -1 1 l 0 2 l 0 1 l 0 1 l 0 1 l 0 1 l -1 0 l 0 1 l 0 1 l -1 0 l 0 1 l 0 1 l 1 1 l -1 2 l 0 1 l 0 1 l -1 0 l 0 1 l -2 1 l 0 1 l 0 1 l -1 2 l -1 0 l -1 2 l -1 0 l -1 2 l -1 0 l 0 1 l -1 1 l 0 1 l -1 0 l 0 1 l -1 0 l -1 1 l 0 1 l -2 1 l 0 1 l -1 1 l -1 1 l -1 1 l -1 0 l -1 1 l -1 2 l -1 0 l 0 1 l -1 0 l 0 1 l -1 0 l 0 1 l 0 1 l -1 0 l 0 1 l -1 1 l 0 1 l -2 1 l -1 1 l -1 0 l -1 -1 l -3 3 l -1 0 l -1 0 l -1 1 l 0 1 l -1 1 l 0 2 l 0 2 l 0 1 l 0 1 l -1 1 l -1 1 l 0 1 l -1 0 l -2 5 l 0 1 l 1 0 l 1 2 l 2 1 l 0 2 l -3 1 l -3 0 l -1 1 l -1 0 l -3 -4 l -1 -1 l -2 -3 l -5 -7 l 1 -4 l 1 -1 l -1 -2 l 1 -1 l 1 -1 l 0 -1 l 1 0 l 0 -1 l 1 -1 l 0 -1 l -2 0 l -4 -1 l -1 -1 l -1 -5 l 0 -1 l 0 -1 l -1 -2 l 0 -1 l 0 1 l -1 0 l -2 0 l -1 1 l -3 2 l -1 0 l -2 0 l -1 -2 l -1 0 l -1 -1 l -1 1 l -1 0 l -1 0 l -1 0 l -1 0 l -1 0 l -1 1 l -1 0 l -3 0 l -1 0 l -1 0 l -2 1 l -1 0 l -2 1 l -2 1 l -1 1 l 0 1 l -3 3 l 0 2 l 0 1 l 0 1 l -2 3 l -1 0 l -3 0 l -1 1 l -1 0 l -1 -1 l -1 0 l -1 0 l 0 -1 l -1 -1 l 0 -1 l -1 -1 l 0 -2 l -4 -3 l -1 -2 l -1 -2 l -2 -4 l -4 -1 l -2 -2 l -1 -1 l -1 -2 l -1 0 l -2 -1 l -2 0 l -1 0 l -1 0 l -1 -1 l -3 -1 l -3 1 l 0 -1 l -1 1 l -1 -1 l -1 -1 l 0 -1 l -1 -1 l 0 -1 l -1 0 l -2 -2 l -1 -2 l -1 -3 l -2 -1 l -2 -1 l -2 1 l -1 2 l -1 0 l -2 1 l -2 -1 l -2 -1 l -1 0 l -3 -1 l -1 -1 l -1 -1 l -2 0 l -2 0 l -1 0 l -1 0 l -1 1 l -1 1 l 0 1 l -3 0 l -1 0 l -2 0 l -2 1 l -1 -4 l 1 0 l 0 -1 l 0 -1 l -1 0 l -2 -1 l 0 -1 l -1 0 l -1 -1 l -3 -2 l -2 -1 l -1 -1 l 0 4 l 0 3 l 0 1 l -1 3 l 0 2 l 0 1 l -3 -2 l -7 -1 l -5 -4 l -1 -1 l -1 0 l -2 -2 l 0 -1 l -16 0 l 0 -5 l -10 6 l -1 1 l -1 0 l -1 0 l -1 1 l -2 0 l 0 1 l -1 0 l -1 0 l -1 2 l -4 3 l 0 1 l -6 6 l -3 2 l 0 1 l -1 0 l -1 1 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l 0 -2 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l -2 -5 l 1 0 l -1 -3 l -1 -2 l 0 -1 l 1 -1 l 1 -1 l 0 -1 l 0 -1 l 1 0 l 0 -1 l 1 -1 l 1 0 l 0 -1 l 1 0 l 1 -2 l 0 -1 l 1 -1 l 1 -1 l -1 0 l 0 -1 l 0 -1 l -1 -1 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l 0 -1 l -1 0 l 0 1 l -1 0 l -1 -1 l -2 -2 l -1 0 l -1 0 l 0 1 l -1 0 l 0 -1 l 0 -1 l 1 -1 l 0 -1 l 1 0 l 2 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 0 l 1 -1 l 1 0 l 0 -1 l 1 0 l 1 -1 l 0 -1 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 0 l 1 -1 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 1 0 l 1 -1 l 0 1 l 2 -1 l 1 0 l 1 -1 l 1 0 l 1 0 l 0 -1 l -1 -1 l 0 -1 l -1 -2 l 0 -1 l -1 -1 l 0 -1 l -1 -1 l 0 -1 l -1 0 l 0 -1 l 0 -1 l -1 0 l 0 -1 l -1 -1 l 0 -1 l -1 0 l 0 -1 l 0 -1 l -1 0 l 0 -1 l -1 -1 l 0 -1 l -1 0 l 0 -1 l -1 -1 l -1 -1 l 0 -1 l 0 -1 l 1 0 l 0 -1 l 1 -1 l 0 -1 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 -1 l 0 -1 l 1 0 l 0 -1 l 2 -2 l 1 -2 l 1 -1 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 -1 l 0 1 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 0 l 0 1 l 1 0 l 0 1 l 1 0 l 0 1 l 1 0 l 1 0 l 2 -1 l 0 -2 l 0 -1 l 1 0 l 1 0 l 0 -1 l 1 0 l 0 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 0 -1 l 0 1 l 1 -1 l 1 0 l 0 1 l 0 1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 1 0 l 2 1 l 3 0 l 1 1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 1 0 l 1 -1 l 2 0 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 2 -1 l 3 0 l 2 0 l 1 0 l 1 0 l 1 0 l 2 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 2 -1 l 1 0 l 1 0 l 1 0 l 1 -1 l 2 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 0 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 1 0 l 2 0 l 2 0 l 2 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 3 0 l 4 0 l 3 0 l 1 0 l 0 1 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 2 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 1 0 l 2 0 l 1 -1 l 1 0 l 1 0 l 2 0 l 2 -1 l 1 0 l 0 -1 l 1 0 l 1 -1 l 1 0 l 1 -1 l 2 -1 l 1 -1 l 1 -1 l 1 0 l 0 -1 l 1 0 l 1 -1 l 2 -1 l 1 0 l 1 -1 l 1 0 l 0 -1 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 1 0 l 1 -1 l 1 0 l 1 0 l 1 0 l 0 1 l 1 0 Z"
         />
         <path
-          class="symbol active"
+          class="symbol"
           href="#area3"
           data-info="Symbol 3"
           alt="용산구"
@@ -331,7 +274,25 @@
         <text class="label" x="1872" y="940">강동구</text>
       </svg>
     </div>
+
+    <h2 class="menu-bar con-min-width">
+      <div class="con">
+        <nav class="menu-bar_menu-box-1 text-align-center">
+          <ul class="inline-grid">
+            <li><a href="#" class="block">전체</a></li>
+            <li><a href="#" class="block">자연</a></li>
+            <li><a href="#" class="block">명소</a></li>
+            <li><a href="#" class="block">놀거리</a></li>
+            <li><a href="#" class="block">쇼핑</a></li>
+          </ul>
+        </nav>
+      </div>
+    </h2>
+
+
     <div id="infoBox"></div>
+
+    <section id="cardList"></section>
     <br />
     <!-- <div class="campus_info">
     <h3>서울시 구</h3> -->
@@ -483,7 +444,7 @@
       </button>
     </div>
 
-    <div class="card-title">
+    <!-- <div class="card-title">
       여행지
       <div class="card-grid">
         <div class="card">
@@ -525,7 +486,7 @@
           <div class="card-top"></div>
           <div class="card-bottom"></div>
         </div>
-      </div>
+      </div> -->
       <div class="ordernum">
         <button class="active">1</button>
         <button>2</button>
@@ -536,7 +497,7 @@
     </div>
     <footer>
       <div class="footer">
-        <div><img src="..." alt="" /></div>
+        <div><img src="/src/image/detail_page/경복궁 목록용 사진.jpg" alt="" /></div>
         <div>
           <div>
             <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
