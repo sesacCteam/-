@@ -115,7 +115,7 @@ document.querySelector(".next-btn").addEventListener("click", () => {
 
   // 슬라이드 크기를 설정하여 한 번에 보이는 카드 개수 (예: 한 번에 4개 카드)
   const cardWidth = 210; // 카드 한 개의 너비
-  const visibleCards = 4; // 한 번에 보이는 카드 수
+  const visibleCards = 1; // 한 번에 보이는 카드 수
   const maxIndex = totalCards - visibleCards; // 최대 인덱스 (슬라이드 끝)
 
   if (currentIndex < maxIndex) {
