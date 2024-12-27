@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 8rem 0px;
+}
+
+.title {
+  height: 200px;
+  line-height: 200px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-title {
+  color: var(--main-color);
+  width: 80%;
+  text-align: center;
+  height: 80px;
+  font-size: 32px;
+  margin-top: 80px;
+  border-top: 1px solid gray;
+  padding-top: 30px;
+}
+
+.none {
+  border: none;
+}
+
+.trainImg {
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  background-color: var(--disabled-color);
+  border-radius: 20px;
+  padding: 25px 40px;
+  width: 80%;
+}
+
+.taxiImg {
+  height: 500px;
+  width: 50%;
+}
