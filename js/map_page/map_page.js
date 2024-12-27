@@ -66,6 +66,8 @@ function clickEvent() {
 
     // 마커에 클릭이벤트를 등록합니다
     window.kakao.maps.event.addListener(marker, "click", function () {
+        // 객체로 출력
+        
       //여기서부터 시작!
       // console.log(marker)
       // console.log(map)
