@@ -65,7 +65,7 @@ const containers = document.querySelectorAll(".image-container");
 containers[0].classList.add("active");
 
 containers.forEach((container) => {
-  container.addEventListener("click", () => {
+  container.addEventListener("mouseover", () => {
     // 모든 컨테이너에서 active 제거
     containers.forEach((c) => c.classList.remove("active"));
 
@@ -91,53 +91,45 @@ const getLocalPlace = async () => {
     finalarr = [];
   }
 
-
-
-
-
   // console.log(test);
 
-  for (let i = 0; i <3; i++) {
-    if (i == 0){
+  for (let i = 0; i < 3; i++) {
+    if (i == 0) {
       place = await fetch(
         `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1/1000`
       );
-    }else if( i==1){
+    } else if (i == 1) {
       place = await fetch(
         `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/1001/2000`
       );
-    }else if(i == 2){
+    } else if (i == 2) {
       place = await fetch(
-       `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/2001/2199`
-    );
+        `http://openapi.seoul.go.kr:8088/705277455931396a3130314a4e647645/json/TbVwAttractions/2001/2199`
+      );
     }
     const placeData = await place.json();
-    console.log(placeData)
-
+    console.log(placeData);
 
     // console.log(i)
     rowlength = placeData.TbVwAttractions.row.length;
 
-    for(j=0; j<rowlength; j++){
-      const lang = placeData.TbVwAttractions.row[j].LANG_CODE_ID; 
+    for (j = 0; j < rowlength; j++) {
+      const lang = placeData.TbVwAttractions.row[j].LANG_CODE_ID;
       // console.log(lang)
 
       let test = placeData.TbVwAttractions.row[j].NEW_ADDRESS;
       const nametest = placeData.TbVwAttractions.row[j].POST_SJ;
       if (lang === "ko") {
-
         koList.push(test, nametest);
         // console.log(koList);
-  
+
         // let result = placeData.filter((placeData.TbVwAttractions.row[0].LANG_CODE_ID) => placeData.TbVwAttractions.row[0].LANG_CODE_ID ==='');
       }
-
     }
-
   }
-      
-// console.log(koList)
-  console.log( 'for 문 밖에 >>>>>>>>>>>>>>>>>>>>>>',koList);
+
+  // console.log(koList)
+  console.log("for 문 밖에 >>>>>>>>>>>>>>>>>>>>>>", koList);
 
   // 구 이름으로 필터 하기
   const placelist = koList.filter(function (koli, i) {
@@ -173,26 +165,36 @@ const getLocalPlace = async () => {
   // 필터로 반복문을 만들어서 용산이라는 글자가 나올때까지 걸르는것
 
   // 필터한거 화면에 추가
-  const infoBox = document.querySelector('#infoBox')
-  const placetitle = document.createElement('h2')
+  const infoBox = document.querySelector("#infoBox");
+  const placetitle = document.createElement("h2");
   placetitle.textContent = guname;
   infoBox.append(placetitle);
 
-  for(i=0 ; i<finalarr.length;i++){
-    let finalarrName = document.createElement('h3');
-    finalarrName.textContent = finalarr[i].name
-    let finalarrAdd = document.createElement('h4');
-    finalarrAdd.textContent = finalarr[i].address
+  for (i = 0; i < finalarr.length; i++) {
+    let finalarrName = document.createElement("h3");
+    finalarrName.textContent = finalarr[i].name;
+    let finalarrAdd = document.createElement("h4");
+    finalarrAdd.textContent = finalarr[i].address;
     infoBox.append(finalarrName);
     infoBox.append(finalarrAdd);
   }
-
-
-
-
-
 };
 
+let finalarrName = document.createElement("h3");
+placeTitle.classList.add("placeTitle");
+placeTitle.textContent = place.place_name;
+placeText.append(placeTitle);
+//정보칸에 주소 입력
+const placeAdd = document.createElement("h4");
+placeAdd.classList.add("placeadd");
+placeAdd.textContent = place.address_name;
+placeText.append(placeAdd);
+//정보칸에 버튼 출력
+const placeBtn = document.createElement("button");
+placeBtn.textContent = "자세히 알아보기";
+placeBtn.classList.add("cardBtn");
+placeBtn.setAttribute("onclick", `location.href = '${place.place_url}'`);
+placeText.append(placeBtn);
 //데이터 정보 HTML에 표시하는 코드
 
 // document.addEventListener("DOMContentLoaded", () => {
