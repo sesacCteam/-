@@ -173,11 +173,16 @@ h5 {
       </div>
     </footer>
 */
+body {
+  font-family: "NanumSquareNeo";
+  background-color: var(--background-color);
+}
 header {
   width: 100%;
   top: 0;
   z-index: 999;
   background-color: white;
+  border-bottom: 3px solid var(--background-color);
 }
 #logo {
   width: 100%;
@@ -186,6 +191,7 @@ header {
   width: 60px;
 }
 .nav-link:hover {
+  font-weight: bold;
   color: var(--main-color);
 }
 .nav-link {
@@ -195,9 +201,14 @@ header {
   display: flex;
   font-size: 16px;
   justify-content: space-around;
+  background-color: white;
 }
 .footer > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+html {
+  font-size: 62.5%;
 }

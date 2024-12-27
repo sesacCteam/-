@@ -298,12 +298,12 @@ button:hover {
   transition: 1s;
 }
 .purpose > div:nth-child(1) {
-  font-size: 3rem;
+  font-size: 2.5vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .purpose > div:nth-child(3),
-div:nth-child(4) {
-  font-size: 2rem;
+div:nth-child(5) {
+  font-size: 1.5vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
