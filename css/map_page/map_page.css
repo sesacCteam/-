@@ -5,24 +5,20 @@ body{
     /* padding:0 8rem 0 8rem; */
 
 /* } */
-.maincontent{
-    position: relative;
-    /* padding: 1rem; */
-    padding:0 8rem 0 8rem;
-    
-}
-.tripgallery{
-    width: 100%;
-    height: 100%;
-    transition: 0.3s ease;
-    /* overflow: hidden; */
-    cursor: pointer;
-}
+
+
+
 .tripImg1{
   width: 100%;
-  height: 20%;
-  object-fit: cover;
+  height: 8rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 8rem;
+  /* object-fit: cover; */
   /* padding: 5px; */
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 1rem;
   border-radius: 20px;
   background-position: 50% 70%;
@@ -30,88 +26,349 @@ body{
    url(https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800);
 }
 .tripImg1:hover{
-    height: 100%;
     transition-duration: 1s;
     background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800);
 }
 
+
 .tripImg2{
     width: 100%;
-    height: 20%;
-    object-fit: cover;
+    height: 8rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 8rem;
+    /* object-fit: cover; */
     /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 1rem;
     border-radius: 20px;
     background-position: 50% 70%;
     background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
      url(https://cdn.crowdpic.net/detail-thumb/thumb_d_6673FAB4A1F590A23E4825B00473A6DB.jpg);
   }
-  .tripImg2:hover{
-      height: 100%;
-      transition-duration: 1s;
-    background-image: 
+.tripImg2:hover {
+    transition-duration: 1s;
+    background-image:
     url(https://cdn.crowdpic.net/detail-thumb/thumb_d_6673FAB4A1F590A23E4825B00473A6DB.jpg);
+}
+
+.tripImg3 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
+}
+.tripImg3:hover{
+    transition-duration: 1s;
+
+    background-image:
+    url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
     }
+    
+.tripImg4 {
+    width: 100%;
+  height: 8rem;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  line-height: 8rem;
+  /* object-fit: cover; */
+  /* padding: 5px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-position: 50% 70%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+}
+.tripImg4:hover {
+    transition-duration: 1s;
+    background-image:
+    url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
+}
+.tripImg5 {
+    width: 100%;
+  height: 8rem;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  line-height: 8rem;
+  /* object-fit: cover; */
+  /* padding: 5px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-position: 50% 70%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+         url(https://www.ktsketch.co.kr/news/photo/202305/7546_38653_564.jpg)
+ }
+    
+.tripImg5:hover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-duration: 1s;
+    background-image:
+    url(https://www.ktsketch.co.kr/news/photo/202305/7546_38653_564.jpg)
+}
 
 
-    .tripImg3{
-        width: 100%;
-        height: 20%;
-        object-fit: cover;
-        /* padding: 5px; */
-        margin-top: 1rem;
-        border-radius: 20px;
-        background-position: 50% 70%;
-        background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-        url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
+/* 지하철여행 */
+.tripImg1-1{
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(https://img2.yna.co.kr/etc/inner/KR/2023/03/30/AKR20230330129800004_01_i_P2.jpg)
+  }
+  .tripImg1-1:hover{
+      transition-duration: 1s;
+      background-image:
+      url(https://img2.yna.co.kr/etc/inner/KR/2023/03/30/AKR20230330129800004_01_i_P2.jpg)
+
+  }
+  
+  .tripImg2-1{
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/overview/e-concierge/shopping-performance/190320-4-768-ove-LTSE.jpg.thumb.768.768.jpg)
     }
-      .tripImg3:hover{
-          height: 100%;
-          transition-duration: 1s;
-          background-image: 
-            url(https://i.ytimg.com/vi/7hFowqlLM5A/maxresdefault.jpg)
-        }
-        .tripImg4{
-            width: 100%;
-            height: 20%;
-            object-fit: cover;
-            /* padding: 5px; */
-            margin-top: 1rem;
-            border-radius: 20px;
-            background-position: 50% 70%;
-            background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-            url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
-        }
-          .tripImg4:hover{
-              height: 100%;
-              transition-duration: 1s;
-              background-image: 
-                url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
-                }
-                .tripImg4{
-                    width: 100%;
-                    height: 20%;
-                    object-fit: cover;
-                    /* padding: 5px; */
-                    margin-top: 1rem;
-                    border-radius: 20px;
-                    background-position: 50% 70%;
-                    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-                    url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
-                }
-                  .tripImg4:hover{
-                      height: 100%;
-                      transition-duration: 1s;
-                      background-image: 
-                        url(https://www.seouldanurim.net/comm/getImage?srvcId=MEDIA&parentSn=27089&fileTy=MEDIA&fileNo=1&thumbTy=S)
-                        }
+  .tripImg2-1:hover {
+      transition-duration: 1s;
+      background-image:
+      url(https://www.lottehotel.com/content/dam/lotte-hotel/lotte/seoul/overview/e-concierge/shopping-performance/190320-4-768-ove-LTSE.jpg.thumb.768.768.jpg)
+    }
+  
+  .tripImg3-1 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url(https://parks.seoul.go.kr/images/egovframework/com/template/culture2.jpg)
+  }
+  .tripImg3-1:hover{
+      transition-duration: 1s;
+      background-image:
+      url(https://parks.seoul.go.kr/images/egovframework/com/template/culture2.jpg)
+      }
+      
+  .tripImg4-1 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url(https://images.squarespace-cdn.com/content/v1/576add5120099e49662793da/1594058944751-HQZIFNDNS184SET4B83P/07_2020_Nodeul_011.jpg)
+  }
+  .tripImg4-1:hover {
+      transition-duration: 1s;
+      background-image:
+      url(https://images.squarespace-cdn.com/content/v1/576add5120099e49662793da/1594058944751-HQZIFNDNS184SET4B83P/07_2020_Nodeul_011.jpg)
+  }
+  .tripImg5-1 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+           url(https://newsroom.posco.com/kr/wp-content/uploads/2020/05/IF3_1.jpg)
+   }
+      
+  .tripImg5-1:hover {
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition-duration: 1s;
+      background-image:
+      url(https://newsroom.posco.com/kr/wp-content/uploads/2020/05/IF3_1.jpg)
+    }
+  /* 도보여행 */
+.tripImg1-2{
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(https://offloadmedia.feverup.com/secretseoul.com/wp-content/uploads/2022/09/07213245/shutterstock_692827960_12008800-1024x683.jpg)
+  }
+  .tripImg1-2:hover{
+      transition-duration: 1s;
+      background-image:
+      url(https://offloadmedia.feverup.com/secretseoul.com/wp-content/uploads/2022/09/07213245/shutterstock_692827960_12008800-1024x683.jpg)
+
+  }
+  
+  .tripImg2-2{
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+       url(https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/62a8d636-234e-4903-b4fb-5dd079c7bee3.jpeg);
+    }
+  .tripImg2-2:hover {
+      transition-duration: 1s;
+      background-image:
+      url(https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/62a8d636-234e-4903-b4fb-5dd079c7bee3.jpeg);
+    }
+  
+  .tripImg3-2 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url(https://www.agoda.com/wp-content/uploads/2024/08/Namsan-Tower-during-autumn-in-Seoul-South-Korea-1244x700.jpg)
+  }
+  .tripImg3-2:hover{
+      transition-duration: 1s;
+      background-image:
+      url(https://www.agoda.com/wp-content/uploads/2024/08/Namsan-Tower-during-autumn-in-Seoul-South-Korea-1244x700.jpg)
+      }
+      
+  .tripImg4-2 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+      url(https://rgo4.com/files/attach/images/2681740/474/858/021/3a158d2a2f2a99bb0144adc0efdaad05.jpg)
+  }
+  .tripImg4-2:hover {
+      transition-duration: 1s;
+      background-image:
+      url(https://rgo4.com/files/attach/images/2681740/474/858/021/3a158d2a2f2a99bb0144adc0efdaad05.jpg)
+  }
+  .tripImg5-2 {
+    width: 100%;
+    height: 8rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8rem;
+    /* object-fit: cover; */
+    /* padding: 5px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-position: 50% 70%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+           url(https://i.namu.wiki/i/1x-j9vNlZuyIYUUbvD4t4tSyZl42XCH4c1EoeXXvO3FdxGijUATt_1Uxv697oMU-sr5hgoKUFkCoHnmSSrX-zQ.webp)
+   }
+      
+  .tripImg5-2:hover {
+      transition-duration: 1s;
+      background-image:
+      url(https://i.namu.wiki/i/1x-j9vNlZuyIYUUbvD4t4tSyZl42XCH4c1EoeXXvO3FdxGijUATt_1Uxv697oMU-sr5hgoKUFkCoHnmSSrX-zQ.webp)
+    }
+
 .triptext{
     color: white;
     text-align: center;
     /* line-height: ; */
     transform: translate(0% , 50%);
 
-}
+}   
 .title{
     /* border: 1px solid black; */
     margin-top: 80px;
@@ -139,13 +396,15 @@ body{
     /* background-position: center; */
 }
 
-.container{
+.howmoveList{
     display: flex;
     justify-content: space-between;
-    /* margin-top: 36px; */
-    width: calc(100vw - 16rem);
+    text-align: center;
+    margin-top: 3rem;
+    width: 100%;
+    padding : 0 8rem 0 8rem;
+    /* align-items: center; */
     /* justify-content: space-between; */
-    /* display: flex; */
 }
 /* .subcontainer{
     display: flex;
@@ -156,8 +415,8 @@ body{
 .mainBox{
     /* border: 1px solid black; */
     width: 33%;
-    /* height: 300px; */
-    line-height: 300px;
+    height: 30rem;
+    line-height: 30rem;
     color: white;
     text-align: center;
     /* /* margin-right: 12px; */
@@ -218,40 +477,21 @@ body{
 /* 목적지 입력 창 커스텀 */
 .textinput{
     position: relative;
-    flex-direction: row;
-    margin-top: 36px;
+    flex-direction: row;    
+    /* margin-top: 3rem; */
 }
 #dest{
     border-radius: 15px;
-    width: 300px;
-    height: 32px;
+    width: 30rem;
+    height: 3rem;
     text-align: center;
+    font-size: 1.6rem;
     /*  */
     /* background-image: url(../src/image/Search.png); */
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: right;
-    
+
     
 }
-.destbutton{
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 4px;
-    bottom: 0;
-    right: 20px;
-    border : 0px;
-    background-color:transparent;
-    background-image: url(../../src/image/map_page/Search.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* display: flex; */
-    /* justify-content: center;     */
-    line-height: 32px;
-    cursor: pointer;
-}
-    
+
 /* /////////////////////////////////////////// */   
 #map{
     margin-top: 36px;
@@ -271,11 +511,23 @@ body{
 
 }
 .cardImg{
-    width: 280px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
     /* background-size: cover; */
     /* overflow: hidden; */
 
+}
+.mappageMain{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;  
+    padding: 0 8rem 0 8rem;  
+
+}
+.outputs{
+    padding: 0;
 }
 /* .placetitle{
     margin-top: 36px;
@@ -301,8 +553,9 @@ body{
     font-family: "NanumSquareNeoLight";
 }
 .cardBtn {
-    /* width: 40px; */
-    /* position: absolute; */
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
     background-color: var(--background-color);
     color: var(--sub-color);
     border: 2px solid var(--component-color);
@@ -325,20 +578,13 @@ body{
     /* line-height: 35rem; */
 
   }
-  .triplist{
-    /* line-height: 35rem; */
-    height: 35rem;
-  }
-  .triptitleArea{
-    display: flex;
-    margin-top: 3rem;
-    justify-content: space-around;
-    /* box-shadow: 0 16px 16px rgba(0,0,0,0.12),  */
-    /* border-bottom: 1px solid black; */
-  }
+
+
   .tripboxArea{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    height: 30rem;
 
   }
   .triptitle{
@@ -349,18 +595,113 @@ body{
     border-bottom: 1px solid black;
 
   }
-  .tripbox{
-    height: 50rem;
-    width: 33%;
-    margin: 2rem;
-    /* border: 1px solid black; */
-    border-radius: 1rem;
-    /* display: inline-block; */
-    /* display: flex; */
-    text-align: center;
-    /* overflow: hidden; */
-    /* padding-top: 2rem; */
+
+
+.bicycleTripList {
+    height:0;
+    overflow:hidden;
+    transition:ease-in 0.5s 0s;}
+
+.subwayTripList {
+    height:0;
+    overflow:hidden;
+    transition:ease-in 0.5s 0s;}
+.walkTripList {
+    height:0;
+    overflow:hidden;
+    transition:ease-in 0.5s 0s;}
+
+#walk{
+    display: none;
+}
+#subway{
+    display: none;
+}
+  #bicycle{
+    display: none;
+
+  }
+.tripCheckbox{
+    height: 8rem;
+    border: 1px solid var(--main-color);
+    border-radius: 2rem;
+    width: calc(100vw - 16rem);
+    line-height: 8rem;
     font-size: 2rem;
-    /* background-color: var(--component-color) */
+}
+.tripCheckbox:hover{
+    background-color: var(--point-color);
+    color: white;
+}
+.tripList{
+    margin-top: 3rem;
+}
+.asdfcv{
+    height: 86rem;
+}
+
+
+@media (max-width: 334px) {
+    html {
+      font-size: 18%;
+    }
+
+    img {
+        width: 5%;
+      }
+  
     
+    .mappageMain{
+        /* display: flex; */
+        /* justify-content: center; */
+        /* width: 100%; */
+        /* background-color: var(--background-color); */
+        flex-direction: column;  
+        padding: 0 2rem 0 2rem;  
+    
+    }
+   .howmoveList{
+    display: flex;
+    /* justify-content: space-between; */
+    text-align: center;
+    flex-direction: column;
+
+    margin-top: 1rem;
+    height: 40rem;
+    width: 100%;
+    padding : 0;
+
+   }
+   .mainBox{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    line-height: 10rem;
+    color: white;
+    text-align: center;
+    /* /* margin-right: 12px; */
+    margin-top: 0px; 
+    font-size: 1rem;
+}
+#map{
+    margin-top: 1rem;
+    /* width: 60vw;
+    height: 50vh; */
+    width: 100%;
+    height: 30rem;
+
+}
+.tripCheckbox{
+    height: 4rem;
+    border-radius: 2rem;
+    width: 20rem;
+    line-height: 4rem;
+    font-size: 1rem;
+
+}
+.tripList{
+    margin-top: 1rem;
+    width: 100%;
+}
+
 }
