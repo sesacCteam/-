@@ -105,14 +105,14 @@ const getLocalPlace = async () => {
 
   for (let i = 0; i < 3; i++) {
     if (i == 0) {
-      place = await fetch('/api/TbVwAttractions/1/1000');
+      place = await fetch('/api/705767596565686735304e50706277/TbVwAttractions/1/1000');
       console.log('test >>>',place);
     } else if (i == 1) {
-      place = await fetch('/api/TbVwAttractions/1001/2000');
+      place = await fetch('/api/705767596565686735304e50706277/TbVwAttractions/1001/2000');
             console.log('test >>>',place);
 
     } else if (i == 2) {
-      place = await fetch('/api/TbVwAttractions/2001/2199');
+      place = await fetch('/api/705767596565686735304e50706277/TbVwAttractions/2001/2199');
             console.log('test >>>',place);
 
     }
