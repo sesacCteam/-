@@ -250,13 +250,19 @@ body {
   gap: 1rem;
 }
 
-@media (max-width: 334px) {
+.calendar {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 390px) {
   html {
-    font-size: 18%;
+    font-size: 30%;
   }
   .wrapper {
     display: flex;
     align-items: center;
+    padding: 0rem 2rem;
   }
   img {
     width: 5%;
@@ -280,9 +286,13 @@ body {
   .forecastData-icon2 {
     width: 10%;
   }
-}
-
-.calendar {
-  height: 2.5rem;
-  margin-bottom: 1rem;
+  .right-middle-top-wrapper {
+    flex-direction: column;
+  }
+  .right-left-wrapper {
+    width: 100%;
+  }
+  .right-right-wrapper {
+    width: 100%;
+  }
 }
