@@ -204,12 +204,18 @@ const getLocalPlace = async () => {
 
   // 데이터를 가공 및 준비
   let preparedCards = []; // 가공된 데이터를 담을 배열
+  // function sanitizeFileName(name) {
+  //   return name.replace(/[^a-zA-Z0-9가-힣]/g, "").replace(/\s+/g, "-");
+  // }
 
   for (let i = 0; i < finalarr.length; i++) {
     let cardData = {
       name: finalarr[i].name,
       address: finalarr[i].address,
-      image: `/src/image/detail_page/사진${i}.png`, // 각 카드에 사용할 이미지 경로
+      image: `/src/image/detail_page/${finalarr[i].name.replace(
+        /  /g,
+        ""
+      )}.jpg`, // 각 카드에 사용할 이미지 경로
     };
     preparedCards.push(cardData); // 가공된 카드 데이터를 배열에 추가
   }
@@ -232,18 +238,45 @@ const getLocalPlace = async () => {
     placeImg.setAttribute("src", cardData.image); // 이미지 설정
     placeCard.appendChild(placeImg);
 
+    placeImg.style.width = "100%";
+    placeImg.style.height = "100%";
+    placeImg.style.objectFit = "cover";
+
+    // 이미지 안불러와졌을떄
+    placeImg.addEventListener("error", () => {
+      placeImg.src = "/src/image/main_page/seoulseoullogo.png"; // 기본 이미지 경로
+    });
+
     // 카드 하단 텍스트 컨테이너
     let placeText = document.createElement("div");
     placeText.classList.add("card-bottom");
+
+    placeText.style.backgroundColor = "#5eb3ff";
+    placeText.style.width = "100%"; // 너비를 부모 요소에 맞춤
+    placeText.style.height = "40%"; // 높이를 텍스트에 맞게 자동 조정
+    placeText.style.wordBreak = "break-word"; // 긴 단어를 줄바꿈
+    placeText.style.whiteSpace = "normal"; // 줄바꿈 허용
 
     // 카드 제목 추가
     let placeTitle = document.createElement("h3");
     placeTitle.textContent = cardData.name;
     placeText.appendChild(placeTitle);
 
+    placeTitle.style.color = "black";
+    placeTitle.style.fontSize = "2rem";
+    placeTitle.style.paddingTop = "3px";
+
     // 카드 주소 추가
     let placeAddress = document.createElement("h4");
     placeAddress.textContent = cardData.address;
+
+    placeAddress.style.overflow = "hidden";
+    placeAddress.style.wordBreak = "break-word";
+    placeAddress.style.lineHeight = "1.2"; // 줄 간격 조정
+    placeAddress.style.maxHeight = "2.4em"; // 최대 높이 제한 (줄 간격 * 최대 줄 수)
+    placeAddress.style.fontSize = "1.6rem";
+    placeAddress.style.paddingTop = "3px";
+
     placeText.appendChild(placeAddress);
 
     // 카드에 하단 텍스트 추가
