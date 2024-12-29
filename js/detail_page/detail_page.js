@@ -253,7 +253,7 @@ const getLocalPlace = async () => {
 
     // placeText.style.backgroundColor = "#5eb3ff";
     placeText.style.width = "100%"; // 너비를 부모 요소에 맞춤
-    placeText.style.height = "40%"; // 높이를 텍스트에 맞게 자동 조정
+    // placeText.style.height = "100%"; // 높이를 텍스트에 맞게 자동 조정
     placeText.style.wordBreak = "break-word"; // 긴 단어를 줄바꿈
     placeText.style.whiteSpace = "normal"; // 줄바꿈 허용
 
@@ -262,19 +262,18 @@ const getLocalPlace = async () => {
     placeTitle.textContent = cardData.name;
     placeText.appendChild(placeTitle);
 
-    placeTitle.style.color = "black";
-    placeTitle.style.fontSize = "2rem";
-    placeTitle.style.paddingTop = "3px";
+    // placeTitle.style.color = "black";
+    // placeTitle.style.fontSize = "2rem";
+    // placeTitle.style.paddingTop = "3px";
 
     // 카드 주소 추가
     let placeAddress = document.createElement("h4");
     placeAddress.textContent = cardData.address;
 
-    placeAddress.style.overflow = "hidden";
     placeAddress.style.wordBreak = "break-word";
     placeAddress.style.lineHeight = "1.2"; // 줄 간격 조정
     placeAddress.style.maxHeight = "2.4rem"; // 최대 높이 제한 (줄 간격 * 최대 줄 수)
-    placeAddress.style.fontSize = "1.6rem";
+    // placeAddress.style.fontSize = "1.6rem";
     placeAddress.style.paddingTop = "3px";
 
     placeText.appendChild(placeAddress);
