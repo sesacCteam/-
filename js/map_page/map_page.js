@@ -109,7 +109,7 @@ function clickEvent() {
         infowindow.open(map, marker);
 
         //   지도 밑에 주소에대한 설명 추가되는 코드 시작
-        cardList = document.querySelector("#cardList");
+        cardList = document.querySelector("#outputs");
         cardList.classList.add("card-grid");
         // 카드형태 만들기
         placeCard = document.createElement("span");
@@ -183,6 +183,7 @@ function clickEvent() {
 
         var btnTop = document.querySelector(".card-top")
         var location =  window.pageYOffset + btnTop.getBoundingClientRect().top;
+        location = location - 210;
         window.scrollTo({top:location, bbehavior : "smooth"})
         
         // var location = document.querySelector(".cardBtn").getBoundingClientRect(); 
@@ -238,3 +239,265 @@ var options = {
 var map = new window.kakao.maps.Map(container, options);
 // console.log(map)
 // console.log(window)
+
+
+var tripCheckbox = document.querySelector(".tripCheckbox")
+
+
+
+const bicycle = document.getElementById('bicycle');
+const tripImg1 = document.querySelector('.tripImg1');
+const tripImg2 = document.querySelector('.tripImg2');
+const tripImg3 = document.querySelector('.tripImg3');
+const tripImg4 = document.querySelector('.tripImg4');
+const tripImg5 = document.querySelector('.tripImg5');
+
+const bicycleTripList = document.querySelector('.bicycleTripList')
+
+
+bicycle.addEventListener('click', function(){
+  if(bicycleTripList.style.height != '50rem'){
+    bicycleTripList.style.height = `50rem` 
+  }
+  else{
+    bicycleTripList.style.height = '0'
+  }
+
+})
+
+tripImg1.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(bicycleTripList.style.height != '86rem' || tripImg1.style.height!='36rem'){
+    bicycleTripList.style.height = `86rem` ;
+    tripImg1.style.height = '36rem';
+  }
+  else if(bicycleTripList.style.height == '86rem' || tripImg1.style.height=='36rem'){
+    bicycleTripList.style.height = '50rem'
+    tripImg1.style.height = '8rem';
+
+  }
+
+})
+tripImg2.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(bicycleTripList.style.height != '86rem' || tripImg2.style.height!='36rem'){
+    bicycleTripList.style.height = `86rem` ;
+    tripImg2.style.height = '36rem';
+  }
+  else if(bicycleTripList.style.height == '86rem' || tripImg2.style.height=='36rem'){
+    bicycleTripList.style.height = '50rem'
+    tripImg2.style.height = '8rem';
+
+  }
+
+})
+tripImg3.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(bicycleTripList.style.height != '86rem' || tripImg3.style.height!='36rem'){
+    bicycleTripList.style.height = `86rem` ;
+    tripImg3.style.height = '36rem';
+  }
+  else if(bicycleTripList.style.height == '86rem' || tripImg3.style.height=='36rem'){
+    bicycleTripList.style.height = '50rem'
+    tripImg3.style.height = '8rem';
+
+  }
+
+})
+tripImg4.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(bicycleTripList.style.height != '86rem' || tripImg4.style.height!='36rem'){
+    bicycleTripList.style.height = `86rem` ;
+    tripImg4.style.height = '36rem';
+  }
+  else if(bicycleTripList.style.height == '86rem' || tripImg4.style.height=='36rem'){
+    bicycleTripList.style.height = '50rem'
+    tripImg4.style.height = '8rem';
+
+  }
+
+})
+tripImg5.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(bicycleTripList.style.height != '86rem' || tripImg5.style.height!='36rem'){
+    bicycleTripList.style.height = `86rem` ;
+    tripImg5.style.height = '36rem';
+  }
+  else if(bicycleTripList.style.height == '86rem' || tripImg5.style.height=='36rem'){
+    bicycleTripList.style.height = '50rem'
+    tripImg5.style.height = '8rem';
+
+  }
+
+})
+//여기까지 자전거
+
+
+//여기부터 지하철
+const subway = document.getElementById('subway');
+const subwayTripList = document.querySelector('.subwayTripList')
+const subway1 = document.querySelector('.tripImg1-1');
+const subway2 = document.querySelector('.tripImg2-1');
+const subway3 = document.querySelector('.tripImg3-1');
+const subway4 = document.querySelector('.tripImg4-1');
+const subway5 = document.querySelector('.tripImg5-1');
+
+subway.addEventListener('click', function(){
+  if(subwayTripList.style.height != '50rem'){
+    subwayTripList.style.height = `50rem` 
+  }
+  else{
+    subwayTripList.style.height = '0'
+  }
+
+})
+
+subway1.addEventListener('click', function(){
+  if(subwayTripList.style.height != '86rem' || subway1.style.height!='36rem'){
+    subwayTripList.style.height = `86rem` ;
+    subway1.style.height = '36rem';
+  }
+  else if(subwayTripList.style.height == '86rem' || subway1.style.height=='36rem'){
+    subwayTripList.style.height = '50rem'
+    subway1.style.height = '8rem';
+
+  }
+
+})
+subway2.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(subwayTripList.style.height != '86rem' || subway2.style.height!='36rem'){
+    subwayTripList.style.height = `86rem` ;
+    subway2.style.height = '36rem';
+  }
+  else if(subwayTripList.style.height == '86rem' || subway2.style.height=='36rem'){
+    subwayTripList.style.height = '50rem'
+    subway2.style.height = '8rem';
+
+  }
+
+})
+subway3.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(subwayTripList.style.height != '86rem' || subway3.style.height!='36rem'){
+    subwayTripList.style.height = `86rem` ;
+    subway3.style.height = '36rem';
+  }
+  else if(subwayTripList.style.height == '86rem' || subway3.style.height=='36rem'){
+    subwayTripList.style.height = '50rem'
+    subway3.style.height = '8rem';
+
+  }
+
+})
+subway4.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(subwayTripList.style.height != '86rem' || subway4.style.height!='36rem'){
+    subwayTripList.style.height = `86rem` ;
+    subway4.style.height = '36rem';
+  }
+  else if(subwayTripList.style.height == '86rem' || subway4.style.height=='36rem'){
+    subwayTripList.style.height = '50rem'
+    subway4.style.height = '8rem';
+
+  }
+
+})
+subway5.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(subwayTripList.style.height != '86rem' || subway5.style.height!='36rem'){
+    subwayTripList.style.height = `86rem` ;
+    subway5.style.height = '36rem';
+  }
+  else if(subwayTripList.style.height == '86rem' || subway5.style.height=='36rem'){
+    subwayTripList.style.height = '50rem'
+    subway5.style.height = '8rem';
+
+  }
+
+})
+//여기까지 지하철
+
+const walk = document.getElementById('walk');
+const walkTripList = document.querySelector('.walkTripList');
+const walk1 = document.querySelector('.tripImg1-2');
+const walk2 = document.querySelector('.tripImg2-2');
+const walk3 = document.querySelector('.tripImg3-2');
+const walk4 = document.querySelector('.tripImg4-2');
+const walk5 = document.querySelector('.tripImg5-2');
+
+walk.addEventListener('click', function(){
+  if(walkTripList.style.height != '50rem'){
+    walkTripList.style.height = `50rem` 
+
+  }
+  else{
+    walkTripList.style.height = '0'
+  }
+
+})
+
+walk1.addEventListener('click', function(){
+  if(walkTripList.style.height != '86rem' || walk1.style.height!='36rem'){
+    walkTripList.style.height = `86rem` ;
+    walk1.style.height = '36rem';
+  }
+  else if(walkTripList.style.height == '86rem' || walk1.style.height=='36rem'){
+    walkTripList.style.height = '50rem'
+    walk1.style.height = '8rem';
+
+  }
+
+})
+walk2.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(walkTripList.style.height != '86rem' || walk2.style.height!='36rem'){
+    walkTripList.style.height = `86rem` ;
+    walk2.style.height = '36rem';
+  }
+  else if(walkTripList.style.height == '86rem' || walk2.style.height=='36rem'){
+    walkTripList.style.height = '50rem'
+    walk2.style.height = '8rem';
+
+  }
+
+})
+walk3.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(walkTripList.style.height != '86rem' || walk3.style.height!='36rem'){
+    walkTripList.style.height = `86rem` ;
+    walk3.style.height = '36rem';
+  }
+  else if(walkTripList.style.height == '86rem' || walk3.style.height=='36rem'){
+    walkTripList.style.height = '50rem'
+    walk3.style.height = '8rem';
+
+  }
+
+})
+walk4.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(walkTripList.style.height != '86rem' || walk4.style.height!='36rem'){
+    walkTripList.style.height = `86rem` ;
+    walk4.style.height = '36rem';
+  }
+  else if(walkTripList.style.height == '86rem' || walk4.style.height=='36rem'){
+    walkTripList.style.height = '50rem'
+    walk4.style.height = '8rem';
+
+  }
+
+})
+walk5.addEventListener('click', function(){
+  console.log(tripImg1)
+  if(walkTripList.style.height != '86rem' || walk5.style.height!='36rem'){
+    walkTripList.style.height = `86rem` ;
+    walk5.style.height = '36rem';
+  }
+  else if(walkTripList.style.height == '86rem' || walk5.style.height=='36rem'){
+    walkTripList.style.height = '50rem'
+    walk5.style.height = '8rem';
+
+  }
+
+})

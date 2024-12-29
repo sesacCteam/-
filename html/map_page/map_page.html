@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../css/map_page/map_page.css">
     <link rel="stylesheet" href="../../css/detail_page/detail_page.css">
 <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main_page/main_page.css">
   
 
     <!-- AOS 라이브러리 불러오기-->
@@ -30,9 +31,12 @@
 <body>
   <header>
     <nav class="navbar bg-body-white">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img id="logo" src="..." alt="로고"
+      <div class="container">
+        <a class="navbar-brand" href="/index.html"
+          ><img
+            id="logo"
+            src="/src/image/main_page/seoulseoullogo.png"
+            alt="로고"
         /></a>
         <a class="nav-link" href="/html/detail_page/detail_page.html"
           >여행지</a
@@ -70,127 +74,163 @@
       </div>
     </nav>
   </header>
-  
-    <h1 class="bannerText">교통</h1>
-    <img class="bannerImg" src="../../src/image/map_page/mapPageMainImg.png" alt="교통이미지">
+  <main class="mappageMain">
+  <div class="main-banner">
+    <img class="banner-img" src="/src/image/main_page/seoulseoulmain.png" alt="교통이미지">
+    <div class="fade-in-text">
+      <span>M</span><span>ap of </span><span>S</span><span>eoul</span>
+    </div>
+  </div>
 
-    <section class="maincontent"data-aos="fade-up"data-aos-duration="1000">  
-    <h2 class="title">서울 교통 정보</h3> 
-    <h3 class="subText">관광에 필요한 교통정보를 확인해 보세요!</h2>
-      <div class="container">
-        <div class="mainBox box1">공항에서 서울가는법</div>
-        <div class="mainBox box2">서울 지하철 이용방법</div>
-        <div class="mainBox box3">서울 시티투어 버스</div>
+    <!-- <h2 class="title">서울 교통 정보</h3> 
+    <h3 class="subText">관광에 필요한 교통정보를 확인해 보세요!</h2> -->
+      <div
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+    >
+      <div class="text-1">
+        <div>관광에 필요한 교통정보를 확인해 보세요!</div>
+        <div>서울의 교통 정보</div>
       </div>
-    <h2 class="title">서울에서 길찾기</h2>
-    <!-- 위치 정보 영역 -->
+    </div>
+      <div class="howmoveList">
+        <a href="./map_road_page.html"class="mainBox box1">
+          <div >공항에서 서울가는법</div>
+        </a>
+        <a href="./map_subway_page.html"class="mainBox box2">
+          <div >서울 지하철 이용방법</div>
+        </a>
+       <a href="./map_detail_page.html"  class="mainBox box3">
+        <div>서울 시티투어 버스</div>
+       </a>
+      
+      </div>
+      <div
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+    >
+      <div class="text-1">
+        <div>가고싶은 장소를 검색해보세요!</div>
+        <div>검색하기</div>
+      </div>
+      </div>
+     <!-- 검색어 입력 영역 -->
+
+    <div class="textinput">
+      <button  onclick="clickEvent()"></button>
+  <input type="text" placeholder="어디로 가고싶으신가요?" id="dest" onkeydown="enterEvent(event)">
+    </div>
+        <!-- 위치 정보 영역 -->
     <div class="mapContainer">
-      <!-- 검색어 입력 영역 -->
-      <div class="textinput">
-        <button class="destbutton" onclick="clickEvent()"></button>
-    <input type="text" placeholder="어디로 가고싶으신가요?" id="dest" onkeydown="enterEvent(event)">
-      </div>
+      
       <!-- 실제 지도 표시 영역 -->
       <div id="map"></div>
     </div>
           <!-- 마커 클릭되면 여기에 카드들이 추가가 됨. -->
-    <section  id="cardList"></section>
+    <section  id="outputs"></section>
+    <div
+    data-aos="fade-down"
+    data-aos-offset="200"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000"
+  >
+    <div class="text-1">
+      <div>여러가지 교통수단으로 서울을 여행하세요!</div>
+      <div>교통 수단 별 선호 여행지</div>
+    </div>
+  </div>
+
+        <section class="tripList">
+          
+            <!-- 자전거여행 -->
+            <label>
+              <input type="checkbox" id="bicycle"> 
+              <p  class="tripCheckbox">자전거여행</p>
+            </label>
+            <div class="bicycleTripList">
+              <div class="tripImg1">여의도 한강공원</div>
+              <div class="tripImg2">올림픽 공원</div>
+              <div class="tripImg3">몽촌토성(팔각정)</div>
+              <div class="tripImg4">하늘공원</div>
+              <div class="tripImg5">서울숲</div>
+            </div>
+        
+          <!-- 지하철여행 -->
+  
+            <label>
+              <input type="checkbox" id="subway"> 
+              <p  class="tripCheckbox">지하철여행</p>
+            </label>
+            <div class="subwayTripList">
+              <div class="tripImg1-1">잠실역-석촌호수</div>
+              <div class="tripImg2-1">명동역-명동거리</div>
+              <div class="tripImg3-1">월드컵경기장역-문화비축기지</div>
+              <div class="tripImg4-1">노들역-노들섬</div>
+              <div class="tripImg5-1">마곡나루역-서울식물원</div>
+            </div>
+       
+
+    
+          <label>
+            <input type="checkbox" id="walk"> 
+            <p  class="tripCheckbox">도보여행</p>
+          </label>
+          <div class="walkTripList">
+            <div class="tripImg1-2">경복궁</div>
+            <div class="tripImg2-2">북촌한옥마을</div>
+            <div class="tripImg3-2">남산타워</div>
+            <div class="tripImg4-2">낙산공원</div>
+            <div class="tripImg5-2">롯데월드</div>
+          </div>
 
 
-    <h2 class="title">교통 수단 별 선호 여행지</h3>
-      <h3 class="subText">여러가지 교통수단으로 서울을 여행하세요!</h2>
-   
-      <div class="tripArea">
-        <section class="triptitleArea">
-          <div>
-            <h3 class="triptitle">자전거 여행</h3>
-          </div>
-          <div>
-            <h3 class="triptitle">지하철 여행</h3>
-          </div>
-          <div>
-            <h3 class="triptitle">도보 여행</h3>
-          </div>
-      </section>
-      <section class="tripboxArea">
-        <div class="tripbox">
-          <div class="triplist">
-            <section class="tripgallery"> 
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg2">
-                <p class="triptext">올림픽 공원</p>
-              </div>
-              <div class="tripImg3">
-                <p class="triptext">몽촌토성(팔각정)</p>
-              </div>
-              <div class="tripImg4">
-                <p class="triptext">하늘공원</p>
-              </div>
-              <div class="tripImg5">
-                <p class="triptext">뚝섬유원지</p>
-              </div>
-              <!-- <img class="tripImg" src="https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800"> -->
+        </section>
+      
 
-            </section>
-          </div>
-        </div>
-        <div class="tripbox">
-          <div class="triplist">
-            <section class="tripgallery"> 
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg2">
-                <p class="triptext">올림픽 공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <!-- <img class="tripImg" src="https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800"> -->
+        
+      
 
-            </section>
-          </div>
-        </div>
-        <div class="tripbox">
-          <div class="triplist">
-            <section class="tripgallery"> 
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg2">
-                <p class="triptext">올림픽 공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <div class="tripImg1">
-                <p class="triptext">여의도 한강공원</p>
-              </div>
-              <!-- <img class="tripImg" src="https://mblogthumb-phinf.pstatic.net/MjAyMTA3MDJfMTQg/MDAxNjI1MTk3MDQ1OTg3.BirXZDueVbKc33UL86cE8iCZpNCSJUHOmaFsF_5N8q8g.8eZhvt35lRYui0jOqLGEEckiVXEIqy1WcexDGSBm2bAg.JPEG.esilvia/1S1B3420-1.JPG?type=w800"> -->
 
-            </section>
-          </div>
-        </div>
-      </section>
-        <!-- <div>대중교통 여행</div>
-        <div>자젼거 여행</div>
-        <div>도보 여행</div> -->
-
-      </div>
+     
   </section> 
-  <script>
-    AOS.init();
-  </script> 
+      <!-- <footer>
+        <div class="footer">
+          <div>
+            <img src="/src/image/main_page/seoulseoullogo.png" alt="로고" />
+          </div>
+          <div>
+            <div>
+              <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
+              Gangwon State 26464, Republic of Korea
+            </div>
+            <div>Copyright © SEOULSEOUL. All rights reserved.</div>
+          </div>
+        </div>
+      </footer> -->
+    <div id="toTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-caret-up-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+        />
+      </svg>
+    </div>
+    <!-- AOS 스크립트 시작 -->
+    <script>
+      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+    <!-- 스크립트 태그 위치 주의!! -->
+    <script src="/js/main_page/main_page.js"></script>
+  </main>
 </body>
 </html>
