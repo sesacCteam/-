@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <title>SeoulSeoul</title>
     
     <!-- CDN links (css) -->
@@ -76,8 +77,8 @@
   </header>
   <main class="mappageMain">
   <div class="main-banner">
-    <img class="banner-img" src="/src/image/main_page/seoulseoulmain.png" alt="교통이미지">
-    <div class="fade-in-text">
+    <img class="banner-img " src="../../src/image/map_page/mapbanner.png" alt="교통이미지">
+    <div class="fade-in-text mapbannerText">
       <span>M</span><span>ap of </span><span>S</span><span>eoul</span>
     </div>
   </div>
@@ -92,7 +93,7 @@
     >
       <div class="text-1">
         <div>관광에 필요한 교통정보를 확인해 보세요!</div>
-        <div>서울의 교통 정보</div>
+        <div class="m_title">서울의 교통 정보</div>
       </div>
     </div>
       <div class="howmoveList">
@@ -115,7 +116,7 @@
     >
       <div class="text-1">
         <div>가고싶은 장소를 검색해보세요!</div>
-        <div>검색하기</div>
+        <div class="m_title">검색하기</div>
       </div>
       </div>
      <!-- 검색어 입력 영역 -->
@@ -140,7 +141,7 @@
   >
     <div class="text-1">
       <div>여러가지 교통수단으로 서울을 여행하세요!</div>
-      <div>교통 수단 별 선호 여행지</div>
+      <div class="m_title">교통 수단 별 선호 여행지</div>
     </div>
   </div>
 
@@ -197,40 +198,39 @@
 
      
   </section> 
-      <!-- <footer>
-        <div class="footer">
-          <div>
-            <img src="/src/image/main_page/seoulseoullogo.png" alt="로고" />
-          </div>
-          <div>
-            <div>
-              <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
-              Gangwon State 26464, Republic of Korea
-            </div>
-            <div>Copyright © SEOULSEOUL. All rights reserved.</div>
-          </div>
+  <footer>
+    <div class="footer">
+      <div>
+        <img src="/src/image/main_page/seoulseoullogo.png" alt="로고" />
+      </div>
+      <div>
+        <div>
+          <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
+          Gangwon State 26464, Republic of Korea
         </div>
-      </footer> -->
-    <div id="toTop">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-caret-up-fill"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
-        />
-      </svg>
+        <div>Copyright © SEOULSEOUL. All rights reserved.</div>
+      </div>
     </div>
-    <!-- AOS 스크립트 시작 -->
-    <script>
-      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
-    </script>
-    <!-- 스크립트 태그 위치 주의!! -->
-    <script src="/js/main_page/main_page.js"></script>
-  </main>
+  </footer>
+  <div id="toTop">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-caret-up-fill"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+      />
+    </svg>
+  </div>
+  <!-- AOS 스크립트 시작 -->
+  <script>
+    AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+  </script>
+  <!-- 스크립트 태그 위치 주의!! -->
+  <script src="/js/main_page/main_page.js"></script>
 </body>
 </html>
