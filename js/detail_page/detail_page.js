@@ -273,7 +273,7 @@ const getLocalPlace = async () => {
     placeAddress.style.overflow = "hidden";
     placeAddress.style.wordBreak = "break-word";
     placeAddress.style.lineHeight = "1.2"; // 줄 간격 조정
-    placeAddress.style.maxHeight = "2.4em"; // 최대 높이 제한 (줄 간격 * 최대 줄 수)
+    placeAddress.style.maxHeight = "2.4rem"; // 최대 높이 제한 (줄 간격 * 최대 줄 수)
     placeAddress.style.fontSize = "1.6rem";
     placeAddress.style.paddingTop = "3px";
 
