@@ -101,6 +101,7 @@ const getLocalPlace = async () => {
   }
 
   // console.log(test);
+      place = await fetch('/api/705767596565686735304e50706277/TbVwAttractions/1/1000');
 
 
   for (let i = 0; i < 3; i++) {
