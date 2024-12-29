@@ -1,6 +1,8 @@
 //지도 누르고 나서 색 유지시키는것
 let place;
 const paths = document.querySelectorAll("path.symbol");
+const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
+
 // const infoBox = document.getElementById("infoBox");
 let guname = "";
 let placename = "";
@@ -98,17 +100,20 @@ const getLocalPlace = async () => {
     finalarr = [];
   }
 
-  // console.log(test);
 
 
   for (let i = 0; i < 3; i++) {
     if (i == 0) {
-      place = await fetch('/api/TbVwAttractions/1/1000');
-
+      place = await fetch('/api/705767596565686735304e50706277/json/TbVwAttractions/1/1000');
+      console.log('test >>>',place);
     } else if (i == 1) {
-      place = await fetch('/api/TbVwAttractions/1001/2000');
+      place = await fetch('/api/705767596565686735304e50706277/json/TbVwAttractions/1001/2000');
+            console.log('test >>>',place);
+
     } else if (i == 2) {
-      place = await fetch('/api/TbVwAttractions/2001/2199');
+      place = await fetch('/api/705767596565686735304e50706277/json/TbVwAttractions/2001/2199');
+            console.log('test >>>',place);
+
     }
     const placeData = await place.json();
     console.log(placeData);
