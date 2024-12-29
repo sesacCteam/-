@@ -13,14 +13,15 @@ function enterEvent(e) {
 }
 function clickEvent() {
   let dest = document.querySelector("#dest").value;
-
+  console.log(cardList)
   // console.log('카드 리스트 콘솔 출력',cardList)
   // console.log('하위 span들 선택', document.querySelectorAll('#cardList > span'))
   // 카드들이 생성되어있다면 삭제하기
-  if (cardList != null) {
-    const allspan = document.querySelectorAll("#cardList > span");
+  if (document.querySelector('#outputs > span') != null) {
+    console.log('조건문 합격')
+    const allspan = document.querySelectorAll("#outputs > span");
     for (i = 0; i < allspan.length; i++) {
-      const removeSpan = document.querySelector("#cardList > span");
+      const removeSpan = document.querySelector("#outputs > span");
       // removeSpan.classList.remove('card')
       cardList.classList.remove("card-grid");
       // 카드삭제
@@ -163,12 +164,12 @@ function clickEvent() {
 
         //정보칸에 이름 입력
         const placeTitle = document.createElement("h3");
-        placeTitle.classList.add("placeTitle");
+        // placeTitle.classList.add("placeTitle");
         placeTitle.textContent = place.place_name;
         placeText.append(placeTitle);
         //정보칸에 주소 입력
         const placeAdd = document.createElement("h4");
-        placeAdd.classList.add("placeadd");
+        // placeAdd.classList.add("placeadd");
         placeAdd.textContent = place.address_name;
         placeText.append(placeAdd);
         //정보칸에 버튼 출력
@@ -186,41 +187,9 @@ function clickEvent() {
         location = location - 210;
         window.scrollTo({top:location, bbehavior : "smooth"})
         
-        // var location = document.querySelector(".cardBtn").getBoundingClientRect(); 
-        // console.log(location)// 버튼이 생성된 위치의 좌표 구하기
-        // window.scrollTo({ top: location.top, behavior: "smooth" }); // 구한 좌표로 스크롤
+
       }
-      // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-      // console.log(place)
-      // console.log(place.place_name);
-      // console.log()
-
-      // 식당이름 출력
-      // const addtitle = document.createElement('h2');
-      // addtitle.innerHTML = place.place_name;
-      // addtitle.classList.add('placetitle')
-      // addressInfor.append(addtitle);
-      // // 식당 주소 출력
-      // const addsubtitle = document.createElement('h3');
-      // addsubtitle.innerHTML = `${place.address_name}`
-      // addtitle.classList.add('placeaddress')
-      // addressInfor.append(addsubtitle)
-      // // 장소 전화번호 출력
-      // const phone = document.createElement('h3');
-      // phone.innerHTML = `${place.phone}`
-      // addressInfor.append(phone)
-      // // 길찾기 버튼 출력
-      // const findLoadbtn = document.createElement('button');
-      // findLoadbtn.innerHTML = '자세히 보기'
-      // addressInfor.append(findLoadbtn)
-      // findLoadbtn.classList.add('movekakaobtn')
-      // console.log(place.id)
-      // findLoadbtn.setAttribute('onclick',`location.href = '${place.place_url}'`)
-      // ///////////////////////////////////////////////////////////////////////
-
-      // function test(){
-      //     location.href = `https://map.kakao.com/link/map/${place.id}`
-      // }
+  
     });
   }
 }

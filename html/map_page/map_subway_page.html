@@ -13,17 +13,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/map_page/map_subway_page.css" />
+    <!-- <link rel="stylesheet" href="../../css/main_page/main_page.css"> -->
   </head>
   <body>
     <header>
       <nav class="navbar bg-body-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img id="logo" src="/src/image/main_page/logo.png" alt="새싹로고"
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html"
+            ><img
+              id="logo"
+              src="/src/image/main_page/seoulseoullogo.png"
+              alt="로고"
           /></a>
-          <a class="nav-link" href="#">여행지</a>
-          <a class="nav-link" href="#">날씨</a>
-          <a class="nav-link" href="#">교통</a>
+          <a class="nav-link" href="/html/detail_page/detail_page.html"
+            >여행지</a
+          >
+          <a class="nav-link" href="/html/weather_page/weather_page.html"
+            >날씨</a
+          >
+          <a class="nav-link" href="/html/map_page/map_page.html">교통</a>
           <div class="dropdown">
             <a
               class="btn btn-white dropdown-toggle"
@@ -54,16 +62,16 @@
       </nav>
     </header>
     <div class="wrapper">
-      <h2 class="title">서울 지하철 이용방법</h2>
-      <div class="sub-title none">지하철노선도</div>
+      <h2 class="subwaytitle">서울 지하철 이용방법</h2>
+    <div class="sub-title none">지하철노선도</div>
       <img
         class="subwayImg"
         src="../../src/image/map_page/seoulSubway.png"
         alt=""
       />
       <div class="sub-title">일회용 교통카드 사용법</div>
-      <div class="container">
-        <img class="card" src="../../src/image/map_page/card1.png" />
+      <div class="subwayContainer">
+        <img class="subwaycard" src="../../src/image/map_page/card1.png" />
         <h3 class="text">
           1회용 교통카드는 수도권 도시철도를 1회만 이용할 수 있는 교통카드로서
           역사에 설치되어 있는 「1회용 발매·교통카드 충전기」에서 이용운임과
@@ -73,7 +81,7 @@
           1회용 교통카드 사용 후 「보증금 환급기」에서 돌려받을 수 있습니다.
         </h3>
       </div>
-      <div class="container">
+      <div class="subwayContainer">
         <h3 class="text">
           1회용 교통카드는 수도권 도시철도에서만 사용이 가능합니다. 1회용
           교통카드는 재사용되므로 훼손하시면 안 됩니다. 본인 부주의로 1회용
@@ -84,14 +92,16 @@
           발매 시 신분증 확인을 통해 우대용을 발급받을 수 있으며, 단, 발급 받은
           당일 발급받은 역에서만 승차가 가능합니다.
         </h3>
-        <img class="card" src="../../src/image/map_page/card2.png" />
+        <img class="subwaycard2" src="../../src/image/map_page/card2.png" />
       </div>
       <div class="sub-title">기후동행카드란?</div>
       <img class="card2" src="../../src/image/map_page/card3.png" />
     </div>
     <footer>
       <div class="footer">
-        <div><img src="..." alt="" /></div>
+        <div>
+          <img src="/src/image/main_page/seoulseoullogo.png" alt="로고" />
+        </div>
         <div>
           <div>
             <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
@@ -101,5 +111,25 @@
         </div>
       </div>
     </footer>
+    <div id="toTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-caret-up-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+        />
+      </svg>
+    </div>
+    <!-- AOS 스크립트 시작 -->
+    <script>
+      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+    <!-- 스크립트 태그 위치 주의!! -->
+    <script src="/js/main_page/main_page.js"></script>
   </body>
 </html>
