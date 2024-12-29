@@ -1,6 +1,8 @@
 //지도 누르고 나서 색 유지시키는것
 let place;
 const paths = document.querySelectorAll("path.symbol");
+const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
+
 // const infoBox = document.getElementById("infoBox");
 let guname = "";
 let placename = "";
