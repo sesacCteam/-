@@ -109,8 +109,12 @@ const getLocalPlace = async () => {
       console.log('test >>>',place);
     } else if (i == 1) {
       place = await fetch('/api/TbVwAttractions/1001/2000');
+            console.log('test >>>',place);
+
     } else if (i == 2) {
       place = await fetch('/api/TbVwAttractions/2001/2199');
+            console.log('test >>>',place);
+
     }
     const placeData = await place.json();
     console.log(placeData);
