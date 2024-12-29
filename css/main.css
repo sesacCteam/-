@@ -90,3 +90,22 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+
+@media (max-width: 390px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-link {
+    display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  .footer {
+    padding: 8rem;
+  }
+  .footer img {
+    display: none;
+  }
+}
