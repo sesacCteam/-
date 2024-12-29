@@ -98,7 +98,7 @@
       </div>
     </div> -->
     <main>
-      <section>
+      <section class="mainsection">
         <div
           data-aos="fade-down"
           data-aos-offset="200"
@@ -150,15 +150,15 @@
             <div class="purpose-2">
               <div>Information</div>
               <div>
-                <a class="weather" href="../weather_page/weather_page.html"
+                <a class="weather" href="/html/weather_page/weather_page.html"
                   ><p>날씨</p>
                 </a>
-                <a class="trans" href="../map_page/map_page.html"
+                <a class="trans" href="/html/map_page/map_page.html"
                   ><p>교통</p>
                 </a>
               </div>
               <div>
-                <a class="place" href="../detail_page/detail_page.html">
+                <a class="place" href="/html/detail_page/detail_page.html">
                   <p>여행지</p>
                 </a>
               </div>
@@ -232,8 +232,7 @@
         </article>
         <article class="content-4">
           <div class="pr-video">
-            <div>PR Video</div>
-            <div>
+            <div class="pr-frame">
               <iframe
                 width="560"
                 height="315"
@@ -245,6 +244,15 @@
                 allowfullscreen
               ></iframe>
             </div>
+          </div>
+          <div
+            class="pr-title"
+            data-aos="fade-down"
+            data-aos-offset="200"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div class="pr-title">PR Video</div>
           </div>
           <!-- <div>contents</div> -->
         </article>
@@ -273,6 +281,20 @@
         </div>
       </div>
     </footer>
+    <div id="toTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-caret-up-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+        />
+      </svg>
+    </div>
     <!-- AOS 스크립트 시작 -->
     <script>
       AOS.init(); // 자바스크립트로 init()을 해야 동작한다.

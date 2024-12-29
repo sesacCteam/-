@@ -48,7 +48,16 @@ header {
 
 .banner-img {
   width: 100%;
-  height: 600px;
+  height: auto;
+  animation: fadein 1.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .main-banner {
   position: relative;
@@ -60,24 +69,24 @@ header {
   color: white;
 }
 .fade-in-text > span:nth-child(1) {
-  font-size: 10rem;
+  font-size: 8vw;
   font-weight: bold;
   animation: fadedown 3s;
   display: inline-block;
 }
 .fade-in-text > span:nth-child(2) {
-  font-size: 8rem;
+  font-size: 6vw;
   font-weight: bold;
   animation: fadein 3s;
 }
 .fade-in-text > span:nth-child(3) {
-  font-size: 8rem;
+  font-size: 6vw;
   font-weight: bold;
   animation: fadeup 3s;
   display: inline-block;
 }
 .fade-in-text > span:nth-child(4) {
-  font-size: 8rem;
+  font-size: 6vw;
   font-weight: bold;
   animation: fadeleft 3s;
   display: inline-block;
@@ -123,6 +132,9 @@ main {
   justify-content: center;
   width: 100%;
   background-color: var(--background-color);
+}
+.mainsection {
+  width: 100%;
 }
 
 .text-1 {
@@ -265,7 +277,7 @@ button:hover {
 .content-2 {
   display: flex;
   justify-content: center;
-  padding: 8rem;
+  padding: 8rem 0 8rem 0;
   background-color: var(--component-color);
 }
 .purpose {
@@ -370,8 +382,8 @@ div:nth-child(5) {
 .content-4 {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
-  margin: 8rem;
+  padding: 8rem 0 8rem 0;
+  background-color: var(--component-color);
 }
 .content-4 iframe {
   width: 50vw;
@@ -379,20 +391,21 @@ div:nth-child(5) {
   border-radius: 15px;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
-
-.content-4 > div:nth-child(1) {
-  flex-basis: 30%;
+.pr-frame {
+  transition: 0.5s;
 }
-.content-4 > div:nth-child(2) {
-  flex-basis: 30%;
-  margin-left: 8rem;
-}
-.pr-video:hover {
+.pr-frame:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
+.pr-title {
+  font-size: 4rem;
+  writing-mode: vertical-rl;
+  text-align: end;
+}
+
 .pr-video {
-  transition: 0.5s;
+  display: flex;
 }
 
 /* -------------------------------------- */
@@ -478,8 +491,141 @@ div:nth-child(5) {
 }
 /* --------------------------------------------------*/
 
-@media (max-width: 334px) {
+/* 600px 로 해놓고 만들어서 현재는 깨짐 */
+@media (max-width: 390px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-link {
+    display: none;
+  }
   .dropdown {
     display: none;
   }
+  .content-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .purpose {
+    width: 90vw;
+    height: 30rem;
+  }
+  .purpose > div:nth-child(1) {
+    font-size: 2rem;
+  }
+  .purpose > div:nth-child(3),
+  div:nth-child(5) {
+    font-size: 1.5rem;
+  }
+
+  .purpose-2 {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  .purpose-2 > div:nth-child(2) {
+    width: 90vw;
+    height: 15rem;
+  }
+  .purpose-2 > div:nth-child(3) {
+    width: 90vw;
+    height: 15rem;
+  }
+  .fade-in-text {
+    bottom: 10px;
+    right: 50px;
+  }
+  .fade-in-text > span:nth-child(1) {
+    font-size: 7vw;
+    font-weight: bold;
+    animation: fadedown 3s;
+    display: inline-block;
+  }
+  .fade-in-text > span:nth-child(2) {
+    font-size: 5vw;
+    font-weight: bold;
+    animation: fadein 3s;
+  }
+  .fade-in-text > span:nth-child(3) {
+    font-size: 5vw;
+    font-weight: bold;
+    animation: fadeup 3s;
+    display: inline-block;
+  }
+  .fade-in-text > span:nth-child(4) {
+    font-size: 5vw;
+    font-weight: bold;
+    animation: fadeleft 3s;
+    display: inline-block;
+  }
+
+  .accordion {
+    width: 90vw;
+  }
+
+  .pic-title {
+    text-align: start;
+  }
+
+  .image-container.active .text2 {
+    font-size: 1.6rem;
+  }
+
+  .content-4 {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+  }
+  .content-4 iframe {
+    width: 80vw;
+    height: 30rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .pr-video:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  .pr-video {
+    transition: 0.5s;
+  }
+  .footer {
+    padding: 8rem;
+  }
+  .footer img {
+    display: none;
+  }
+}
+
+/* ---------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+#toTop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  opacity: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: var(--point-color);
+  transition: all 0.3s;
+  border-radius: 50px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  line-height: 45px;
+}
+#toTop svg {
+  width: 25px;
+  height: 25px;
+}
+#toTop:hover {
+  color: #fff;
+  background: var(--sub-color);
 }
