@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/detail_page/detail_page.css" />
 
-    <!-- AOS CSS -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link
       href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
       rel="stylesheet"
@@ -27,9 +28,9 @@
   <body>
     <header>
       <nav class="navbar bg-body-white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img id="logo" href="/index.html" src="/src/image/main_page/seoulseoullogo.png" alt="서울서울로고"
+        <div class="container">
+          <a class="navbar-brand" href="/index.html"
+            ><img id="logo" src="/src/image/main_page/seoulseoullogo.png" alt="서울서울로고"
           /></a>
           <a class="nav-link" href="/html/detail_page/detail_page.html">여행지</a>
           <a class="nav-link" href="/html/weather_page/weather_page.html">날씨</a>
@@ -424,6 +425,7 @@
       >
         <img src="/src/image/detail_page/서울타워.jpg" alt="img3" />
         <div class="text">남산 서울타워</div>
+        <div class="text2">자연과 공존하는 남산타워를 둘러보세요!</div>
       </div>
       <div class="image-container">
         <a
@@ -536,5 +538,8 @@
         </div>
       </div>
     </footer>
+    <script>
+      AOS.init(); 
+    </script>
   </body>
 </html>

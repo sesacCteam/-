@@ -251,7 +251,7 @@ const getLocalPlace = async () => {
     let placeText = document.createElement("div");
     placeText.classList.add("card-bottom");
 
-    placeText.style.backgroundColor = "#5eb3ff";
+    // placeText.style.backgroundColor = "#5eb3ff";
     placeText.style.width = "100%"; // 너비를 부모 요소에 맞춤
     placeText.style.height = "40%"; // 높이를 텍스트에 맞게 자동 조정
     placeText.style.wordBreak = "break-word"; // 긴 단어를 줄바꿈

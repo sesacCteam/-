@@ -269,6 +269,23 @@ text {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
+.image-container .text2 {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  font-size: 2.5rem;
+}
+.image-container.active .text2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: 0.7s ease-in;
+  opacity: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* .image-container .text2 {
   position: absolute;
   top: 10%;
@@ -353,7 +370,7 @@ text {
 
 /* 카드 상단 이미지 */
 .card-top {
-  height: 120px;
+  height: 12rem;
   background-size: cover;
   background-position: center;
 }
@@ -362,17 +379,20 @@ text {
 .card-bottom {
   padding: 12px;
   text-align: left;
+  background-color: #5eb3ff;
+  height: 12rem;
+  width: 28rem;
 }
 
 .card-bottom h3 {
   margin: 0;
-  font-size: 1.1em;
+  /* font-size: 1.1rem; */
   color: #333;
 }
 
 .card-bottom h4 {
   margin: 4px 0 0;
-  font-size: 0.9em;
+  /* font-size: 0.9rem; */
   color: #555;
 }
 
@@ -384,15 +404,10 @@ text {
   text-align: center;
 }
 .card-top {
-  background-color: #d1e7ff;
+  background-color: #5eb3ff;
   overflow: hidden;
-  width: 280px;
-  height: 210px;
-}
-.card-bottom {
-  background-color: #d3d3d3;
-  height: 120px;
-  width: 280px;
+  width: 28rem;
+  height: 21rem;
 }
 
 ul,
