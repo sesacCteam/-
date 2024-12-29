@@ -4,35 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>서울시 구별 SVG 지도</title>
+    <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <!-- CDN link (css) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/detail_page/detail_page.css" />
 
-    <script src="/js/detail_page/detail_page.js" defer></script>
-
-    <!-- <style>
-      
-    </style> -->
+    <!-- AOS CSS -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
     <link
       href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"
       rel="stylesheet"
     />
+    <script src="/js/detail_page/detail_page.js" defer></script>
+
   </head>
   <body>
     <header>
       <nav class="navbar bg-body-white">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img id="logo" src="/src/image/main_page/logo.png" alt="새싹로고"
+            ><img id="logo" href="/index.html" src="/src/image/main_page/seoulseoullogo.png" alt="서울서울로고"
           /></a>
-          <a class="nav-link" href="#">여행지</a>
-          <a class="nav-link" href="#">날씨</a>
-          <a class="nav-link" href="#">교통</a>
+          <a class="nav-link" href="/html/detail_page/detail_page.html">여행지</a>
+          <a class="nav-link" href="/html/weather_page/weather_page.html">날씨</a>
+          <a class="nav-link" href="/html/map_page/map_page.html">교통</a>
           <div class="dropdown">
             <a
               class="btn btn-white dropdown-toggle"
@@ -275,7 +276,7 @@
       </svg>
     </div>
 
-    <h2 class="menu-bar con-min-width">
+    <!-- <h2 class="menu-bar con-min-width"> -->
       <div class="con">
         <nav class="menu-bar_menu-box-1 text-align-center">
           <ul class="inline-grid">
@@ -294,6 +295,8 @@
 
     <section id="cardList"></section>
     <br />
+
+   
     <!-- <div class="campus_info">
     <h3>서울시 구</h3> -->
     <!-- <div class="campus_spec">
@@ -376,26 +379,64 @@
         </ul>
         </div> -->
     <!-- </div> -->
+  
+     <article class="content-3">
+      <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      >
+      <div class="accordion">
     <div class="pic_title">추천</div>
     <div class="gallery">
       <div class="image-container active">
-        <img src="/src/image/detail_page/사진1.png" alt="img1" />
-        <div class="text">용산구</div>
+        <a
+          href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+          target="_blank"
+        >
+        <!-- <div class="image-wrapper"> -->
+        <img 
+        src="/src/image/detail_page/경복궁.jpg" alt="img1" 
+        />
+        <!-- <div class="text-overlay"></div> -->
+        <div class="text">경복궁</div>
+        <!-- <div class="word2">경복궁의 웅장함을 느껴보세요!</div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      </a>
+      </div>
+      
+      <div class="image-container">
+        <a
+          href="https://hanok.seoul.go.kr/front/index.do"
+          target="_blank"
+        >
+        <img src="/src/image/detail_page/북촌 한옥 마을.jpg" alt="img2" />
+        <div class="text">북촌 한옥마을</div>
+        <!-- <div class="text 2">한국의 전통문화를 체험해 보세요!</div> -->
+        </a>
       </div>
       <div class="image-container">
-        <img src="/src/image/detail_page/사진2.jpg" alt="img2" />
-        <div class="text">중구</div>
+        <a
+        href="https://www.seoultower.co.kr"
+        target="_blank"
+      >
+        <img src="/src/image/detail_page/서울타워.jpg" alt="img3" />
+        <div class="text">남산 서울타워</div>
       </div>
       <div class="image-container">
-        <img src="/src/image/detail_page/사진3.jpeg" alt="img3" />
-        <div class="text">서초구</div>
+        <a
+        href="https://www.lwt.co.kr"
+        target="_blank"
+      >
+        <img src="/src/image/detail_page/롯데월드 타워.jpg" alt="img4" />
+        <div class="text">롯데월드 타워</div>
+        </div>
       </div>
-      <div class="image-container">
-        <img src="/src/image/detail_page/사진4.png" alt="img4" />
-        <div class="text">광화문</div>
       </div>
     </div>
-
+  </article>
     <div
       id="carouselExampleInterval"
       class="carousel slide"
@@ -404,25 +445,19 @@
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
           <img
-            src="/src/image/detail_page/서울시 광고1png.png"
+            src="/src/image/detail_page/banner1.jpeg"
             class="d-block w-100"
             alt="..."
           />
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <img
-            src="/src/image/detail_page/서울시 광고1png.png"
+            src="/src/image/detail_page/banner2.jpg"
             class="d-block w-100"
             alt="..."
           />
         </div>
-        <div class="carousel-item">
-          <img
-            src="/src/image/detail_page/서울시 광고1png.png"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
+        
       </div>
       <button
         class="carousel-control-prev"
@@ -487,17 +522,11 @@
           <div class="card-bottom"></div>
         </div>
       </div> -->
-      <div class="ordernum">
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-      </div>
-    </div>
+      
+
     <footer>
       <div class="footer">
-        <div><img src="/src/image/detail_page/경복궁 목록용 사진.jpg" alt="" /></div>
+        <div><img src="/src/image/main_page/seoulseoullogo.png" alt="서울서울로고" /></div>
         <div>
           <div>
             <strong>SEOULSEOUL Headquarters</strong>, 10 Segye-ro, Wonju-si,
