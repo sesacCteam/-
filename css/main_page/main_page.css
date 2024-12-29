@@ -133,6 +133,9 @@ main {
   width: 100%;
   background-color: var(--background-color);
 }
+.mainsection {
+  width: 100%;
+}
 
 .text-1 {
   display: flex;
@@ -507,7 +510,7 @@ div:nth-child(5) {
   }
   .purpose {
     width: 90vw;
-    height: 50vh;
+    height: 30rem;
   }
   .purpose > div:nth-child(1) {
     font-size: 2rem;
@@ -526,29 +529,35 @@ div:nth-child(5) {
   }
   .purpose-2 > div:nth-child(2) {
     width: 90vw;
+    height: 15rem;
   }
   .purpose-2 > div:nth-child(3) {
     width: 90vw;
+    height: 15rem;
+  }
+  .fade-in-text {
+    bottom: 10px;
+    right: 50px;
   }
   .fade-in-text > span:nth-child(1) {
-    font-size: 7rem;
+    font-size: 7vw;
     font-weight: bold;
     animation: fadedown 3s;
     display: inline-block;
   }
   .fade-in-text > span:nth-child(2) {
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: bold;
     animation: fadein 3s;
   }
   .fade-in-text > span:nth-child(3) {
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: bold;
     animation: fadeup 3s;
     display: inline-block;
   }
   .fade-in-text > span:nth-child(4) {
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: bold;
     animation: fadeleft 3s;
     display: inline-block;
@@ -570,11 +579,10 @@ div:nth-child(5) {
     display: flex;
     justify-content: center;
     font-size: 4rem;
-    margin: 8rem;
   }
   .content-4 iframe {
-    width: 90vw;
-    height: 50vh;
+    width: 80vw;
+    height: 30rem;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
   }
