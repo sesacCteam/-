@@ -100,9 +100,7 @@ const getLocalPlace = async () => {
     finalarr = [];
   }
 
-  // console.log(test);
-      place = await fetch('/api/705767596565686735304e50706277/TbVwAttractions/1/1000');
-      console.log('for문밖에',place)
+
 
   for (let i = 0; i < 3; i++) {
     if (i == 0) {
