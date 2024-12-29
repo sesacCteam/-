@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/api/*"
-  to = "http://openapi.seoul.go.kr:8088/705767596565686735304e50706277:splat"
+  to = "http://openapi.seoul.go.kr:8088/:splat"
   status = 200
   force = true
