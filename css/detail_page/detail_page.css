@@ -6,8 +6,9 @@ body {
   flex-direction: column;
 }
 svg {
-  width: 80%;
+  width: 100%;
   height: auto;
+  max-width: 700px;
 }
 
 header {
@@ -377,21 +378,24 @@ text {
 
 /* 카드 하단 텍스트 */
 .card-bottom {
-  padding: 12px;
+  /* padding: 12px; */
   text-align: left;
   background-color: #5eb3ff;
-  height: 12rem;
-  width: 100%;
+  /* height: auto; */
+  width: auto;
+  /* display: inline-block; */
 }
 
 .card-bottom h3 {
   margin: 0;
+  /* height: auto; */
   /* font-size: 1.1rem; */
   color: #333;
 }
 
 .card-bottom h4 {
   margin: 4px 0 0;
+  /* height: auto; */
   /* font-size: 0.9rem; */
   color: #555;
 }
@@ -456,4 +460,42 @@ a {
 
 .inline-grid {
   font-size: 2rem;
+}
+
+.carousel {
+  padding-bottom: 8rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+@media (max-width: 390px) {
+  html {
+    font-size: 18%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .symbol {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    width: 90vw;
+    height: auto;
+  }
+
+  .card-bottom {
+    font-size: 2rem;
+  }
+
+  .inline-grid {
+    /* text-align: center; */
+    /* display: flex; */
+    justify-content: space-around;
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 50rem;
+  }
 }
